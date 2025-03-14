@@ -32,3 +32,20 @@ flutter <command>
 ```
 
 Recommended to alias this in `.bashrc` or equivalent.
+
+### Pre-Commit
+
+Install [`pre-commit`](https://pre-commit.com/) via your preferred method e.g.
+`brew`:
+
+```sh
+brew install pre-commit
+```
+
+And then in the repo root run:
+
+```sh
+pre-commit install
+```
+
+This will use the `.pre-commit-config.yaml` to use the listed plugins.
