@@ -9,9 +9,9 @@ import 'package:result_dart/result_dart.dart';
 import 'package:shouldly/shouldly.dart';
 
 const _kCategories = [
-  CategoryModel('Technology', 'tech.json'),
-  CategoryModel('Science', 'science.json'),
-  CategoryModel('Sports', 'sports.json'),
+  CategoryModel(name: 'Technology', file: 'tech.json'),
+  CategoryModel(name: 'Science', file: 'science.json'),
+  CategoryModel(name: 'Sports', file: 'sports.json'),
 ];
 
 class FakeService implements Service {
