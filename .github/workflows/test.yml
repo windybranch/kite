@@ -32,7 +32,7 @@ jobs:
   test:
     needs: changes
     # always run the tests on push to main
-    if: ${{ needs.changes.outputs.dart == 'true' || needs.changes.result == 'skipped' }}
+    if: ${{ always() && (needs.changes.outputs.dart == 'true' || needs.changes.result == 'skipped') }}
 
     runs-on: ubuntu-latest
 
