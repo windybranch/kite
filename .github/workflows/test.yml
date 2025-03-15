@@ -1,0 +1,49 @@
+name: test flutter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  changes:
+    if: ${{ github.event_name == 'pull_request' }}
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: read
+    outputs:
+      dart: ${{ steps.filter.outputs.dart }}
+    steps:
+      # for pull requests it's not necessary to checkout the code
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            dart:
+             - 'lib/**'
+             - 'test/**'
+
+  test:
+    needs: changes
+    # always run the tests on push to main
+    if: ${{ needs.changes.outputs.dart == 'true' || needs.changes.result == 'skipped' }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup flutter
+        uses: kuhnroyal/flutter-fvm-config-action/setup@v3
+
+      - name: get packages
+        run: flutter pub get
+
+      - name: run flutter tests
+        run: flutter test
