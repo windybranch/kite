@@ -31,10 +31,10 @@ const String _kJson = '''
 ''';
 
 const _kModels = [
-  CategoryModel('World', 'world.json'),
-  CategoryModel('USA', 'usa.json'),
-  CategoryModel('Business', 'business.json'),
-  CategoryModel('Technology', 'tech.json')
+  CategoryModel(name: 'World', file: 'world.json'),
+  CategoryModel(name: 'USA', file: 'usa.json'),
+  CategoryModel(name: 'Business', file: 'business.json'),
+  CategoryModel(name: 'Technology', file: 'tech.json')
 ];
 
 class FakeLoader implements AssetLoader {
