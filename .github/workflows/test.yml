@@ -28,6 +28,8 @@ jobs:
             dart:
              - 'lib/**'
              - 'test/**'
+             - 'testing/**'
+             - 'pubspec.yaml'
 
   test:
     needs: changes
