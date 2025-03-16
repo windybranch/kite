@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:json_serializer/json_serializer.dart';
 import 'package:kite/data/categories.dart';
 import 'package:result_dart/result_dart.dart';
@@ -56,4 +57,16 @@ class LocalService implements Service {
 
 abstract final class _Assets {
   static const String categories = 'assets/kite.json';
+}
+
+class LocalAssetLoader implements AssetLoader {
+  @override
+  AsyncResult<String> loadAsset(String path) async {
+    try {
+      final data = await rootBundle.loadString(path);
+      return Success(data);
+    } on Exception catch (e) {
+      return Failure(e);
+    }
+  }
 }

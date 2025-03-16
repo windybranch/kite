@@ -1,0 +1,149 @@
+{
+  "timestamp": 1742080498,
+  "categories": [
+    {
+      "name": "World",
+      "file": "world.json"
+    },
+    {
+      "name": "USA",
+      "file": "usa.json"
+    },
+    {
+      "name": "Business",
+      "file": "business.json"
+    },
+    {
+      "name": "Technology",
+      "file": "tech.json"
+    },
+    {
+      "name": "Science",
+      "file": "science.json"
+    },
+    {
+      "name": "Sports",
+      "file": "sports.json"
+    },
+    {
+      "name": "Gaming",
+      "file": "gaming.json"
+    },
+    {
+      "name": "Bay Area",
+      "file": "bay.json"
+    },
+    {
+      "name": "Linux & OSS",
+      "file": "linux & oss.json"
+    },
+    {
+      "name": "Cryptocurrency",
+      "file": "cryptocurrency.json"
+    },
+    {
+      "name": "Europe",
+      "file": "europe.json"
+    },
+    {
+      "name": "UK",
+      "file": "uk.json"
+    },
+    {
+      "name": "Ukraine",
+      "file": "ukraine.json"
+    },
+    {
+      "name": "Brazil",
+      "file": "brazil.json"
+    },
+    {
+      "name": "Australia",
+      "file": "australia.json"
+    },
+    {
+      "name": "Estonia",
+      "file": "estonia.json"
+    },
+    {
+      "name": "Mexico",
+      "file": "mexico.json"
+    },
+    {
+      "name": "Germany",
+      "file": "germany.json"
+    },
+    {
+      "name": "Germany | Hesse",
+      "file": "germany | hesse.json"
+    },
+    {
+      "name": "Italy",
+      "file": "italy.json"
+    },
+    {
+      "name": "Canada",
+      "file": "canada.json"
+    },
+    {
+      "name": "Thailand",
+      "file": "thailand.json"
+    },
+    {
+      "name": "Serbia",
+      "file": "serbia.json"
+    },
+    {
+      "name": "Japan",
+      "file": "japan.json"
+    },
+    {
+      "name": "Israel",
+      "file": "israel.json"
+    },
+    {
+      "name": "New Zealand",
+      "file": "new zealand.json"
+    },
+    {
+      "name": "Portugal",
+      "file": "portugal.json"
+    },
+    {
+      "name": "France",
+      "file": "france.json"
+    },
+    {
+      "name": "Poland",
+      "file": "poland.json"
+    },
+    {
+      "name": "Slovenia",
+      "file": "slovenia.json"
+    },
+    {
+      "name": "Spain",
+      "file": "spain.json"
+    },
+    {
+      "name": "Ireland",
+      "file": "ireland.json"
+    },
+    {
+      "name": "Belgium",
+      "file": "belgium.json"
+    },
+    {
+      "name": "The Netherlands",
+      "file": "the netherlands.json"
+    },
+    {
+      "name": "Romania",
+      "file": "romania.json"
+    },
+    {
+      "name": "OnThisDay",
+      "file": "onthisday.json"
+    }
+  ]
+}
