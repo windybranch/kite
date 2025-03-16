@@ -35,8 +35,8 @@ void main() {
         final model = HomeViewModel(repo: repo);
 
         before(() async {
-          final result = await model.load();
-          result.isSuccess().should.beTrue();
+          await model.load.execute();
+          model.load.isSuccess.should.beTrue();
         });
 
         then('the categories are returned', () {
@@ -49,8 +49,8 @@ void main() {
         final model = HomeViewModel(repo: repo);
 
         before(() async {
-          final result = await model.load();
-          result.isError().should.beTrue();
+          await model.load.execute();
+          model.load.isFailure.should.beTrue();
         });
 
         then('the categories are empty', () {
