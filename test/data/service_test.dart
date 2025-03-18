@@ -1,11 +1,13 @@
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:given_when_then_unit_test/given_when_then_unit_test.dart';
+import 'package:kite/data/article.dart';
 import 'package:kite/data/categories.dart';
 import 'package:kite/data/service_local.dart';
 import 'package:result_dart/result_dart.dart';
 import 'package:shouldly/shouldly.dart';
 
+import '../../testing/articles.dart';
 import '../../testing/categories.dart';
 import '../../testing/service.dart';
 
@@ -43,8 +45,6 @@ void main() {
           result.isError().should.beTrue();
         });
 
-        after(() => loader.fail = false);
-
         then('it should return a failure', () {
           final err = result.exceptionOrNull();
           err.should.not.beNull();
@@ -55,9 +55,42 @@ void main() {
 
   group('test fetching articles json', () {
     given('a local asset json file', () {
+      late FakeLoader loader;
+
       when('fetching articles json for a category', () {
+        loader = FakeLoader(kArticleJson);
+        final service = LocalService(loader);
+        late Result<List<ArticleModel>> result;
+
+        before(() async {
+          final category = CategoryModel(name: 'World', file: 'world.json');
+          result = await service.fetchArticles(category);
+          result.isSuccess().should.beTrue();
+        });
+
         then('it should return a list of article models', () {
-          //
+          final models = result.getOrNull();
+          models.should.not.beNull();
+          models?.length.should.be(kArticleModels.length);
+          final match = listEquals(models, kArticleModels);
+          match.should.beTrue();
+        });
+      });
+
+      when('fetching articles fails', () {
+        loader = FakeLoader(kArticleJson, fail: true);
+        final service = LocalService(loader);
+        late Result<List<ArticleModel>> result;
+
+        before(() async {
+          final category = CategoryModel(name: 'World', file: 'world.json');
+          result = await service.fetchArticles(category);
+          result.isError().should.beTrue();
+        });
+
+        then('it should return a failure', () {
+          final err = result.exceptionOrNull();
+          err.should.not.beNull();
         });
       });
     });

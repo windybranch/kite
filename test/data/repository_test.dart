@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:given_when_then_unit_test/given_when_then_unit_test.dart';
+import 'package:kite/data/article.dart';
 import 'package:kite/data/categories.dart';
 import 'package:kite/data/repository.dart';
 import 'package:kite/data/service.dart';
@@ -24,6 +25,12 @@ class FakeService implements Service {
     return fail
         ? Future.value(Failure(Exception('failed to fetch categories')))
         : Future.value(Success(_kCategories));
+  }
+
+  @override
+  AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) {
+    // TODO: implement fetchArticles
+    throw UnimplementedError();
   }
 }
 

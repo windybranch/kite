@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:json_serializer/json_serializer.dart';
+import 'package:kite/data/article.dart';
 import 'package:kite/data/categories.dart';
 import 'package:result_dart/result_dart.dart';
 
@@ -52,6 +53,12 @@ class LocalService implements Service {
     }
 
     return models;
+  }
+
+  @override
+  AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) {
+    // TODO: implement fetchArticles
+    throw UnimplementedError();
   }
 }
 
