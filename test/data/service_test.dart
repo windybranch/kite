@@ -6,49 +6,8 @@ import 'package:kite/data/service_local.dart';
 import 'package:result_dart/result_dart.dart';
 import 'package:shouldly/shouldly.dart';
 
-const String _kJson = '''
-{
-  "timestamp": 1741958498,
-  "categories": [
-    {
-      "name": "World",
-      "file": "world.json"
-    },
-    {
-      "name": "USA",
-      "file": "usa.json"
-    },
-    {
-      "name": "Business",
-      "file": "business.json"
-    },
-    {
-      "name": "Technology",
-      "file": "tech.json"
-    }
-  ]
-}
-''';
-
-const _kModels = [
-  CategoryModel(name: 'World', file: 'world.json'),
-  CategoryModel(name: 'USA', file: 'usa.json'),
-  CategoryModel(name: 'Business', file: 'business.json'),
-  CategoryModel(name: 'Technology', file: 'tech.json')
-];
-
-class FakeLoader implements AssetLoader {
-  FakeLoader({this.fail = false});
-
-  bool fail;
-
-  @override
-  AsyncResult<String> loadAsset(String path) {
-    return fail
-        ? Future.value(Failure(Exception('failed to load asset')))
-        : Future.value(Success(_kJson));
-  }
-}
+import '../../testing/categories.dart';
+import '../../testing/service.dart';
 
 void main() {
   group('test fetching categories json', () {
@@ -56,7 +15,7 @@ void main() {
       late FakeLoader loader;
 
       when('fetching categories json', () {
-        loader = FakeLoader();
+        loader = FakeLoader(kCategoriesJson);
         final service = LocalService(loader);
         late Result<List<CategoryModel>> result;
 
@@ -68,14 +27,14 @@ void main() {
         then('it should return a list of category models', () {
           final models = result.getOrNull();
           models.should.not.beNull();
-          models?.length.should.be(_kModels.length);
-          final match = listEquals(models, _kModels);
+          models?.length.should.be(kCategoryModels.length);
+          final match = listEquals(models, kCategoryModels);
           match.should.beTrue();
         });
       });
 
       when('fetching categories fails', () {
-        loader = FakeLoader(fail: true);
+        loader = FakeLoader(kCategoriesJson, fail: true);
         final service = LocalService(loader);
         late Result<List<CategoryModel>> result;
 
@@ -89,6 +48,16 @@ void main() {
         then('it should return a failure', () {
           final err = result.exceptionOrNull();
           err.should.not.beNull();
+        });
+      });
+    });
+  });
+
+  group('test fetching articles json', () {
+    given('a local asset json file', () {
+      when('fetching articles json for a category', () {
+        then('it should return a list of article models', () {
+          //
         });
       });
     });

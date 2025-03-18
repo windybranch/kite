@@ -1,4 +1,36 @@
+import 'package:kite/data/categories.dart';
 import 'package:kite/logic/categories.dart';
+
+const kCategoryModels = [
+  CategoryModel(name: 'World', file: 'world.json'),
+  CategoryModel(name: 'USA', file: 'usa.json'),
+  CategoryModel(name: 'Business', file: 'business.json'),
+  CategoryModel(name: 'Technology', file: 'tech.json')
+];
+
+const String kCategoriesJson = '''
+{
+  "timestamp": 1741958498,
+  "categories": [
+    {
+      "name": "World",
+      "file": "world.json"
+    },
+    {
+      "name": "USA",
+      "file": "usa.json"
+    },
+    {
+      "name": "Business",
+      "file": "business.json"
+    },
+    {
+      "name": "Technology",
+      "file": "tech.json"
+    }
+  ]
+}
+''';
 
 const kCategories = [
   Category("World"),
