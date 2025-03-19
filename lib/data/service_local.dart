@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:json_serializer/json_serializer.dart';
+import 'package:kite/data/article.dart';
 import 'package:kite/data/categories.dart';
 import 'package:result_dart/result_dart.dart';
 
@@ -34,20 +35,48 @@ class LocalService implements Service {
     if (json.isEmpty) log('json categories asset is null');
 
     final models = <CategoryModel>[];
-    models.addAll(_decodeCategories(json));
+    try {
+      models.addAll(_decode<CategoryModel>(json, 'categories'));
+    } on FormatException catch (e) {
+      log('error decoding json categories asset: $e');
+      return Future.value(Failure(e));
+    }
 
     return Future.value(Success(models));
   }
 
-  List<CategoryModel> _decodeCategories(String json) {
-    final models = <CategoryModel>[];
+  @override
+  AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) async {
+    final result = await _loader.loadAsset(_Assets.articles);
+    if (result.isError()) {
+      final err = result.exceptionOrNull();
+      log('error loading json articles asset: $err');
+      return Future.value(Failure(err!));
+    }
+
+    final json = result.getOrNull() ?? '';
+    if (json.isEmpty) log('json articles asset is null');
+
+    final models = <ArticleModel>[];
+    try {
+      models.addAll(_decode<ArticleModel>(json, 'clusters'));
+    } on FormatException catch (e) {
+      log('error decoding json articles asset: $e');
+      return Future.value(Failure(e));
+    }
+
+    return Future.value(Success(models));
+  }
+
+  List<T> _decode<T>(String json, String jsonKey) {
+    final models = <T>[];
 
     final decoded = jsonDecode(json) as Map<String, dynamic>;
-    final categories = decoded['categories'] as List<dynamic>;
+    final data = decoded[jsonKey] as List<dynamic>;
 
-    for (final (category as Map<String, dynamic>) in categories) {
-      final encoded = jsonEncode(category);
-      final model = deserialize<CategoryModel>(encoded, JsonConfig.options);
+    for (final (item as Map<String, dynamic>) in data) {
+      final encoded = jsonEncode(item);
+      final model = deserialize<T>(encoded, JsonConfig.options);
       models.add(model);
     }
 
@@ -57,6 +86,7 @@ class LocalService implements Service {
 
 abstract final class _Assets {
   static const String categories = 'assets/kite.json';
+  static const String articles = 'assets/world.json';
 }
 
 class LocalAssetLoader implements AssetLoader {
