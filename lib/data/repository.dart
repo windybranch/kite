@@ -33,7 +33,7 @@ class CacheRepository implements Repository {
     }
 
     final List<Category> categories =
-        models.map((m) => Category(m.name)).toList();
+        models.map((m) => Category(m.name, [])).toList();
     _cached.addAll(categories);
 
     return Future.value(Success(categories));
