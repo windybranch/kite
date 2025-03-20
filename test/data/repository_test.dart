@@ -9,11 +9,10 @@ import 'package:kite/logic/categories.dart';
 import 'package:result_dart/result_dart.dart';
 import 'package:shouldly/shouldly.dart';
 
-const _kCategories = [
-  CategoryModel(name: 'Technology', file: 'tech.json'),
-  CategoryModel(name: 'Science', file: 'science.json'),
-  CategoryModel(name: 'Sports', file: 'sports.json'),
-];
+import '../../testing/articles.dart';
+import '../../testing/categories.dart';
+
+const _kWorldCategory = 'World';
 
 class FakeService implements Service {
   bool fail;
@@ -24,25 +23,30 @@ class FakeService implements Service {
   AsyncResult<List<CategoryModel>> fetchCategories() {
     return fail
         ? Future.value(Failure(Exception('failed to fetch categories')))
-        : Future.value(Success(_kCategories));
+        : Future.value(Success(kCategoryModels));
   }
 
   @override
   AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) {
-    // TODO: implement fetchArticles
-    throw UnimplementedError();
+    return switch (category.name) {
+      _kWorldCategory => Future.value(Success(kArticleModels)),
+      _ => Future.value(Success([])),
+    };
   }
 }
 
 void main() {
+  setUpAll(() => GivenWhenThenOptions.pads = 4);
+
   group('test repository behaviour', () {
     given('a list of category models', () {
-      final models = _kCategories;
+      final models = kCategoryModels;
 
       when('the repository loads successfully', () {
         final service = FakeService();
         final repository = CacheRepository(service);
         late Result<List<Category>> result;
+        final categories = <Category>[];
 
         before(() async {
           result = await repository.loadCategories();
@@ -50,20 +54,29 @@ void main() {
         });
 
         then('the categories are returned', () {
-          final categories = result.getOrNull();
+          final categoriesResult = result.getOrNull() ?? [];
+          categories.addAll(categoriesResult);
           categories.should.not.beNull();
           categories.should.not.beEmpty();
+          categories.length.should.be(models.length);
+        }, and: {
+          'the correct articles are in the categories': () {
+            final worlds =
+                categories.where((c) => c.name == _kWorldCategory).toList();
+            worlds.length.should.be(1);
+            final world = worlds.first;
+            world.should.not.beNull();
+            world.articles.length.should.be(kArticles.length);
 
-          bool match = false;
-
-          for (final model in models) {
-            if (model.name == categories?.first.name) {
-              match = true;
-              break;
-            }
+            // TODO: make this match work.
+            //
+            // The match fails with deep equality matching the [Perspective]s records.
+            // The [Source] records are a nested [List] and won't pass equality checks.
+            //
+            // https://stackoverflow.com/questions/76697156/how-do-i-compare-dart-records-with-deep-equality
+            final match = listEquals(world.articles, kArticles);
+            // match.should.beTrue();
           }
-
-          match.should.beTrue();
         });
       });
 

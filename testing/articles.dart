@@ -1,4 +1,336 @@
 import 'package:kite/data/article.dart';
+import 'package:kite/logic/article.dart';
+
+final kArticles = [
+  Article(
+    group: "Diplomacy",
+    title: "Trump to discuss Ukraine war with Putin on Tuesday",
+    summary:
+        "US President Donald Trump announced he will speak with Russian President Vladimir Putin on Tuesday, March 18, to discuss ending the war in Ukraine. Trump indicated that the conversation will include discussions about \"dividing up certain assets,\" including land and power plants, following what he described as productive weekend negotiations. The Kremlin has confirmed the planned call as Ukraine has reportedly accepted a US-backed 30-day ceasefire proposal.",
+    highlights: [
+      (
+        title: "Ceasefire proposal",
+        content:
+            "Ukraine has reportedly accepted a US-backed 30-day ceasefire proposal that Trump is trying to get Putin to support.",
+      ),
+      (
+        title: "Russian demands",
+        content:
+            "Russia is seeking \"ironclad guarantees\" that Ukraine will be excluded from NATO membership and remain neutral in any peace deal.",
+      ),
+      (
+        title: "Diplomatic efforts",
+        content:
+            "US special envoy Steve Witkoff recently visited Moscow for talks with Putin, describing the discussions as \"positive.\"",
+      ),
+      (
+        title: "Asset negotiations",
+        content:
+            "Trump specifically mentioned \"land and power plants\" as topics for discussion, likely referring to Russian-occupied territories and facilities like the Zaporizhzhia nuclear plant.",
+      ),
+      (
+        title: "European concerns",
+        content:
+            "European allies remain wary about potential concessions to Russia, with some countries including Britain and France offering to send peacekeepers to monitor any ceasefire.",
+      ),
+    ],
+    quote: (
+      author: "Donald Trump",
+      content:
+          "We will be talking about land. We will be talking about power plants...We're already talking about that, dividing up certain assets.",
+      domain: "theguardian.com",
+      url:
+          "https://www.theguardian.com/world/2025/mar/17/trump-says-he-and-putin-will-discuss-land-and-powerplants-in-ukraine-ceasefire-talks",
+    ),
+    perspectives: [
+      (
+        title: "US administration",
+        text:
+            "Trump believes a deal to end the war is possible, citing \"a lot of work\" done over the weekend and expressing confidence in the negotiations.",
+        sources: [
+          (
+            name: "The Guardian",
+            url:
+                "https://www.theguardian.com/world/2025/mar/17/trump-says-he-and-putin-will-discuss-land-and-powerplants-in-ukraine-ceasefire-talks",
+            date: null,
+            domain: null,
+          ),
+        ],
+      ),
+      (
+        title: "Russian position",
+        text:
+            "Russia demands that any peace agreement must include Ukraine's exclusion from NATO and neutral status, with Deputy Foreign Minister Alexander Grushko calling for \"ironclad security guarantees.\"",
+        sources: [
+          (
+            name: "TASS",
+            url: "https://tass.com/politics/1928999",
+            date: null,
+            domain: null,
+          ),
+        ],
+      ),
+      (
+        title: "Ukrainian",
+        text:
+            "Ukrainian officials insist there can be no peace without the return of thousands of Ukrainian children who have been forcibly deported to Russia since the beginning of the full-scale invasion.",
+        sources: [
+          (
+            name: "The Globe and Mail",
+            url:
+                "https://www.theglobeandmail.com/world/article-ukrainian-officials-say-no-peace-without-return-of-children-forcibly/",
+            date: null,
+            domain: null,
+          )
+        ],
+      ),
+      (
+        title: "European concerns",
+        text:
+            "European leaders are scrambling to prepare for what comes next, fearing unpredictable and controversial concessions from the US president.",
+        sources: [
+          (
+            name: "The Guardian",
+            url:
+                "https://www.theguardian.com/us-news/2025/mar/17/first-thing-kremlin-confirms-trump-putin-call-to-go-ahead",
+            date: null,
+            domain: null,
+          )
+        ],
+      )
+    ],
+    background:
+        "Russia launched a full-scale invasion of Ukraine in February 2022, initially aiming to topple the Ukrainian government but failing to achieve this objective. Despite this setback, Russian forces continue to occupy large swaths of Ukrainian territory across the east and south, with fighting continuing along multiple fronts for over three years.",
+    reactions: [
+      (
+        title: "🇬🇧 United Kingdom",
+        content:
+            "Offered to send peacekeepers to monitor any ceasefire in Ukraine.",
+      ),
+      (
+        title: "🇫🇷 France",
+        content:
+            "Expressed willingness to deploy a peacekeeping force to monitor a potential ceasefire.",
+      ),
+      (
+        title: "🇵🇱 Poland",
+        content:
+            "Prime Minister Donald Tusk warned about Russia's nature in relation to peace negotiations, linking it to Russian-linked acts of sabotage and arson in the EU.",
+      ),
+    ],
+    timeline: [
+      (
+        date: "February 2022",
+        title: "Russia launches full-scale invasion of Ukraine",
+      ),
+      (
+        date: "March 2023",
+        title:
+            "International Criminal Court issues arrest warrants for Putin over unlawful deportation of children",
+      ),
+      (
+        date: "Early March 2025",
+        title: "Ukraine accepts US-backed 30-day ceasefire proposal",
+      ),
+      (
+        date: "March 2025",
+        title: "US envoy Steve Witkoff meets with Putin in Moscow",
+      ),
+      (
+        date: "March 18, 2025",
+        title: "Scheduled call between Trump and Putin",
+      ),
+    ],
+    sources: [
+      (
+        name: "Trump and Putin Will Talk Tuesday in Push to End Ukraine War",
+        url:
+            "https://time.com/7268806/trump-putin-russia-ukraine-war-zelensky/",
+        domain: "time.com",
+        date: DateTime.parse("2025-03-17T05:58:55+00:00"),
+      ),
+      (
+        name: "Kremlin Stays Mum on Agenda for Putin’s Call With Trump",
+        url:
+            "https://www.nytimes.com/2025/03/17/world/europe/putin-trump-russia-ukraine.html",
+        domain: "nytimes.com",
+        date: DateTime.parse("2025-03-17T11:52:29+00:00"),
+      ),
+      (
+        name:
+            "Investors seek to profit from Russia as Trump pursues rapprochement",
+        url: "https://www.ft.com/content/21a7fc36-8244-4806-aecd-fb268344d80c",
+        domain: "ft.com",
+        date: DateTime.parse("2025-03-17T00:01:58+00:00"),
+      ),
+    ],
+    fact:
+        "The call between Trump and Putin will be their first known conversation since Putin laid out numerous conditions for a potential ceasefire with Ukraine.",
+  ),
+  Article(
+    group: "Conflict",
+    title: "US escalates airstrikes against Yemen's Houthis",
+    summary:
+        "The United States has launched a series of airstrikes against Yemen's Iran-backed Houthi rebels, killing at least 53 people according to the Houthi-run Health Ministry. The US Defense Secretary Pete Hegseth stated that attacks will continue until the Houthis cease their campaign against shipping in the Red Sea, while the Houthis have vowed to escalate their own attacks on US naval vessels in response.",
+    highlights: [
+      (
+        title: "Strike casualties",
+        content:
+            "At least 53 people, including five women and two children, were killed and nearly 100 wounded in the US airstrikes according to the Houthi-run Health Ministry.",
+      ),
+      (
+        title: "US justification",
+        content:
+            "The Pentagon describes the operation as a response to the Houthis' \"unrelenting campaign of piracy, violence and terrorism\" that has disrupted global shipping routes.",
+      ),
+      (
+        title: "Houthi response",
+        content:
+            "Following the US strikes, the Houthis claimed to have launched attacks on the USS Harry S. Truman carrier group and banned US vessels from the Red Sea.",
+      ),
+      (
+        title: "Economic impact",
+        content:
+            "The Houthi campaign has significantly disrupted global shipping through the Red Sea, forcing vessels to take longer routes and causing shipping costs to rise sharply.",
+      ),
+      (
+        title: "Regional tension",
+        content:
+            "The escalation occurs within the broader context of Middle East tensions related to the Israel-Gaza conflict, with the Houthis claiming their maritime attacks are in protest of Israel's actions in Gaza."
+      ),
+    ],
+    quote: (
+      author: "Pete Hegseth, US Defense Secretary",
+      content:
+          "The minute the Houthis say we'll stop shooting at your ships, we'll stop shooting at your drones. This campaign will end, but until then it will be unrelenting.",
+      domain: "newarab.com",
+      url:
+          "https://www.newarab.com/news/us-vows-keep-hitting-houthis-until-shipping-attacks-stop",
+    ),
+    perspectives: [
+      (
+        title: "US administration",
+        text:
+            "The strikes are necessary to protect freedom of navigation in a critical waterway and will continue until the Houthis cease their attacks on international shipping.",
+        sources: [
+          (
+            name: "The New Arab",
+            url:
+                "https://www.newarab.com/news/us-vows-keep-hitting-houthis-until-shipping-attacks-stop",
+            domain: null,
+            date: null,
+          ),
+        ],
+      ),
+      (
+        title: "Houthi leadership",
+        text:
+            "The US airstrikes constitute a \"war crime,\" and the group will \"confront escalation with escalation\" by targeting US ships as long as attacks on Yemen continue.",
+        sources: [
+          (
+            name: "The Guardian",
+            url:
+                "https://www.theguardian.com/world/live/2025/mar/17/middle-east-houthis-us-yemen-israel-gaza-palestine-latest-live-news-updates",
+            domain: null,
+            date: null,
+          )
+        ],
+      ),
+      (
+        title: "Iran",
+        text:
+            "Tehran has condemned the US strikes on Yemen and pledged to respond \"destructively\" to the American aggression against its ally.",
+        sources: [
+          (
+            name: "Firstpost",
+            url:
+                "https://www.firstpost.com/world/us-says-strikes-on-houthis-in-yemen-will-continue-indefinitely-as-iran-pledges-to-respond-destructively-13871937.html",
+            domain: null,
+            date: null,
+          )
+        ],
+      ),
+      (
+        title: "Military analysts",
+        text:
+            "Some experts believe the airstrikes will ultimately fail to deter the Houthis, noting that previous attempts to stop the group have been unsuccessful.",
+        sources: [
+          (
+            name: "The Spectator",
+            url:
+                "https://thespectator.com/topic/trump-airstrikes-on-houthis-will-fail/",
+            domain: null,
+            date: null,
+          )
+        ],
+      ),
+    ],
+    background:
+        "The Houthis have controlled much of Yemen since the mid-2010s following a civil war that drew in regional powers. They began attacking ships in the Red Sea in November 2023, claiming solidarity with Palestinians in Gaza, though their targets have extended beyond vessels connected to Israel.",
+    reactions: [
+      (
+        title: "🇷🇺 Russia",
+        content:
+            "Called on Washington to cease the strikes on Yemen and urged for dialogue.",
+      ),
+      (
+        title: "🇨🇳 China",
+        content:
+            "Urged for \"dialogue\" and a de-escalation of tensions in the Red Sea region.",
+      ),
+      (
+        title: "🇮🇷 Iran",
+        content:
+            "Condemned the US strikes and threatened a \"destructive\" response to American aggression against its ally.",
+      )
+    ],
+    timeline: [
+      (
+        date: "November 2023",
+        title:
+            "Houthis begin targeting vessels in the Red Sea, claiming solidarity with Gaza.",
+      ),
+      (
+        date: "January 2024",
+        title: "Biden administration begins airstrikes against Houthi targets.",
+      ),
+      (
+        date: "March 16, 2025",
+        title:
+            "Trump orders \"decisive and powerful\" strikes on Yemen, killing 53 people.",
+      ),
+      (
+        date: "March 17, 2025",
+        title:
+            "US continues airstrikes as Houthis claim attacks on USS Harry Truman carrier group.",
+      ),
+    ],
+    sources: [
+      (
+        name: "Why is the US attacking Yemen's Houthis?",
+        url:
+            "https://www.abc.net.au/news/2025-03-17/why-is-the-us-attacking-yemens-houthis/105060702",
+        domain: "abc.net.au",
+        date: DateTime.parse("2025-03-17T04:37:29+00:00"),
+      ),
+      (
+        name: "Houthis threaten attacks on US warships",
+        url: "https://www.rt.com/news/614328-houthi-targets-us-waships/",
+        domain: "rt.com",
+        date: DateTime.parse("2025-03-17T00:34:48+00:00"),
+      ),
+      (
+        name: "U.S. piles pressure on Yemen's Houthis with new airstrikes",
+        url:
+            "https://www.thehindu.com/news/international/us-piles-pressure-on-yemens-houthis-with-new-airstrikes/article69340251.ece",
+        domain: "thehindu.com",
+        date: DateTime.parse("2025-03-17T11:48:03+00:00"),
+      ),
+    ],
+    fact:
+        "The Houthis have controlled a large part of war-torn Yemen since the mid-2010s and have attacked over 100 merchant vessels in the Red Sea since November 2023.",
+  ),
+];
 
 const kArticleModels = [
   ArticleModel(
@@ -61,7 +393,7 @@ const kArticleModels = [
                 "https://www.theguardian.com/us-news/2025/mar/17/first-thing-kremlin-confirms-trump-putin-call-to-go-ahead"
           }
         ],
-      )
+      ),
     ],
     emoji: "☎️",
     historical_background:
