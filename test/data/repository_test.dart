@@ -1,39 +1,14 @@
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:given_when_then_unit_test/given_when_then_unit_test.dart';
-import 'package:kite/data/article.dart';
-import 'package:kite/data/categories.dart';
 import 'package:kite/data/repository.dart';
-import 'package:kite/data/service.dart';
 import 'package:kite/logic/categories.dart';
 import 'package:result_dart/result_dart.dart';
 import 'package:shouldly/shouldly.dart';
 
 import '../../testing/articles.dart';
 import '../../testing/categories.dart';
-
-const _kWorldCategory = 'World';
-
-class FakeService implements Service {
-  bool fail;
-
-  FakeService({this.fail = false});
-
-  @override
-  AsyncResult<List<CategoryModel>> fetchCategories() {
-    return fail
-        ? Future.value(Failure(Exception('failed to fetch categories')))
-        : Future.value(Success(kCategoryModels));
-  }
-
-  @override
-  AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) {
-    return switch (category.name) {
-      _kWorldCategory => Future.value(Success(kArticleModels)),
-      _ => Future.value(Success([])),
-    };
-  }
-}
+import '../../testing/service.dart';
 
 void main() {
   setUpAll(() => GivenWhenThenOptions.pads = 4);
@@ -62,7 +37,7 @@ void main() {
         }, and: {
           'the correct articles are in the categories': () {
             final worlds =
-                categories.where((c) => c.name == _kWorldCategory).toList();
+                categories.where((c) => c.name == kWorldCategory).toList();
             worlds.length.should.be(1);
             final world = worlds.first;
             world.should.not.beNull();
