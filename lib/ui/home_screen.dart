@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:result_command/result_command.dart';
 
 import '../logic/home.dart';
+import 'categories_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.model});
@@ -26,15 +27,7 @@ class HomeScreen extends StatelessWidget {
               );
             }
 
-            return ListView.builder(
-              itemCount: model.categories.length,
-              itemBuilder: (context, index) {
-                final item = model.categories[index];
-                return ListTile(
-                  title: Text(item.name),
-                );
-              },
-            );
+            return CategoriesView(model.categories);
           },
         ),
       ),
