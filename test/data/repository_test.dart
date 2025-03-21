@@ -55,7 +55,7 @@ void main() {
         });
       });
 
-      when('the repository fails to load', () {
+      when('the repository fails to load categories', () {
         final service = FakeService(Fail.categories);
         final repository = CacheRepository(service);
         late Result<List<Category>> result;
@@ -68,6 +68,23 @@ void main() {
         then('a failure is returned', () {
           final failure = result.exceptionOrNull();
           failure.should.not.beNull();
+        });
+      });
+
+      when('the repository fails to load articles', () {
+        final service = FakeService(Fail.articles);
+        final repository = CacheRepository(service);
+        late Result<List<Category>> result;
+
+        before(() async {
+          result = await repository.loadCategories();
+          result.isError().should.beTrue();
+        });
+
+        then('a failure is returned', () {
+          final failure = result.exceptionOrNull();
+          failure.should.not.beNull();
+          failure.toString().contains('articles').should.beTrue();
         });
       });
 
