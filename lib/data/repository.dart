@@ -42,7 +42,7 @@ class CacheRepository implements Repository {
       if (result.isError()) {
         final err = result.exceptionOrNull();
         log('error loading articles for category: ${model.name} in file ${model.file}: $err');
-        // TODO: return Failure();
+        return Future.value(Failure(err!));
       }
 
       final articles = result.getOrNull() ?? [];
@@ -58,6 +58,11 @@ class CacheRepository implements Repository {
 
   AsyncResult<List<Article>> _loadArticles(CategoryModel category) async {
     final result = await _service.fetchArticles(category);
+    if (result.isError()) {
+      final err = result.exceptionOrNull();
+      return Future.value(Failure(err!));
+    }
+
     final models = result.getOrNull() ?? [];
     if (models.isEmpty) {
       log('no articles found via service for category: ${category.name} in file ${category.file}');
