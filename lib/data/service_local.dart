@@ -47,10 +47,9 @@ class LocalService implements Service {
 
   @override
   AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) async {
-    final result = await _loader.loadAsset(_Assets.articles);
+    final result = await _loader.loadAsset(_Assets.path(category.file));
     if (result.isError()) {
       final err = result.exceptionOrNull();
-      log('error loading json articles asset: $err');
       return Future.value(Failure(err!));
     }
 
@@ -76,8 +75,12 @@ class LocalService implements Service {
 
     for (final (item as Map<String, dynamic>) in data) {
       final encoded = jsonEncode(item);
-      final model = deserialize<T>(encoded, JsonConfig.options);
-      models.add(model);
+      try {
+        final model = deserialize<T>(encoded, JsonConfig.options);
+        models.add(model);
+      } catch (e) {
+        log('error decoding json article asset: $e');
+      }
     }
 
     return models;
@@ -85,8 +88,13 @@ class LocalService implements Service {
 }
 
 abstract final class _Assets {
+  static const String dir = 'assets/';
   static const String categories = 'assets/kite.json';
-  static const String articles = 'assets/world.json';
+
+  /// Returns the asset path for the given file.
+  ///
+  /// Based on the asset root directory.
+  static String path(String file) => '$dir$file';
 }
 
 class LocalAssetLoader implements AssetLoader {
@@ -94,9 +102,9 @@ class LocalAssetLoader implements AssetLoader {
   AsyncResult<String> loadAsset(String path) async {
     try {
       final data = await rootBundle.loadString(path);
-      return Success(data);
+      return Future.value(Success(data));
     } on Exception catch (e) {
-      return Failure(e);
+      return Future.value(Failure(e));
     }
   }
 }

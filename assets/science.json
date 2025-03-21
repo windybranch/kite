@@ -1,0 +1,1149 @@
+{
+  "category": "Science",
+  "timestamp": 1742573818,
+  "read": 816,
+  "clusters": [
+    {
+      "cluster_number": 1,
+      "unique_domains": 14,
+      "number_of_titles": 17,
+      "category": "Neuroscience",
+      "title": "Babies form memories similar to adults, study finds",
+      "short_summary": "New research from Yale University challenges long-held beliefs about infant memory capabilities, revealing that babies as young as 12 months can form memories using the same hippocampal encoding process as adults. The study used brain scans to show that when infants' hippocampus was more active upon seeing an image for the first time, they were more likely to recognize that image later, suggesting infantile amnesia stems from retrieval difficulties rather than an inability to form memories.",
+      "did_you_know": "The phenomenon of not remembering our earliest years, known as \"infantile amnesia,\" was first termed by psychologist Sigmund Freud and has fascinated neuroscientists for more than a century.",
+      "talking_points": [
+        "Groundbreaking methodology: Researchers used fMRI scanning technology to observe brain activity in infants, overcoming the challenge of studying pre-verbal babies.",
+        "Memory encoding confirmed: The study provides evidence that the infant hippocampus can encode the types of information required for episodic memory from around 12 months of age.",
+        "Retrieval hypothesis: The findings suggest our inability to recall early memories isn't because they weren't formed, but rather because we lose access to them as our brains rapidly develop.",
+        "Parallel research: Scientists are also developing novel memristors (memory resistors) that function similarly to brain cells and could help address \"catastrophic forgetting\" in artificial neural networks."
+      ],
+      "quote": "\"The hallmark of [episodic memories] is that you can describe them to others, but that's off the table when you're dealing with pre-verbal infants.\"",
+      "quote_author": "Nick Turk-Browne, psychology professor and director of the Yale Wu Tsai Institute",
+      "quote_source_url": "https://www.popsci.com/science/why-dont-i-remember-being-a-baby-study/",
+      "quote_source_domain": "popsci.com",
+      "location": "New Haven, CT, USA",
+      "perspectives": [
+        {
+          "text": "Memory formation researchers: The hippocampus in infants as young as 12 months can encode episodic memories, challenging previous assumptions that this brain region wasn't developed enough for memory formation in early life.",
+          "sources": [
+            {
+              "name": "Science",
+              "url": "https://www.science.org/doi/10.1126/science.adw1923"
+            }
+          ]
+        },
+        {
+          "text": "Memory retrieval theorists: While memories may be formed in infancy, our inability to recall them later in life is likely due to retrieval failures rather than encoding problems, suggesting these memories may still exist but are inaccessible.",
+          "sources": [
+            {
+              "name": "NPR",
+              "url": "https://www.npr.org/sections/shots-health-news/2025/03/20/nx-s1-5332387/baby-brain-scans-new-clues-infant-memories"
+            }
+          ]
+        }
+      ],
+      "emoji": "🧠",
+      "geopolitical_context": "",
+      "historical_background": "Scientists have traditionally believed that infantile amnesia occurs because the hippocampus is still developing in early childhood and thus unable to properly encode memories. This theory has persisted for decades, with researchers struggling to definitively test it due to the challenges of studying pre-verbal infants.",
+      "international_reactions": "",
+      "humanitarian_impact": "",
+      "economic_implications": "",
+      "timeline": "",
+      "future_outlook": "",
+      "key_players": [],
+      "technical_details": "",
+      "business_angle_text": "",
+      "business_angle_points": [],
+      "user_action_items": "",
+      "scientific_significance": [
+        "Paradigm shift: The study challenges the long-held scientific consensus that infants cannot form episodic memories, demonstrating that the neural mechanisms for memory encoding are functional much earlier than previously thought.",
+        "Methodological breakthrough: The successful use of fMRI with infants represents a significant technical achievement that opens new possibilities for studying early brain development and function.",
+        "Theoretical implications: The findings suggest a reconceptualization of infantile amnesia as a retrieval problem rather than an encoding failure, prompting new research directions into how early memories might be accessed or recovered."
+      ],
+      "travel_advisory": [],
+      "destination_highlights": "",
+      "culinary_significance": "",
+      "performance_statistics": [],
+      "league_standings": "",
+      "diy_tips": "",
+      "design_principles": "",
+      "user_experience_impact": "",
+      "gameplay_mechanics": [],
+      "industry_impact": [],
+      "technical_specifications": "",
+      "articles": [
+        {
+          "title": "Brain Scans Confirm Babies Form Memories, Challenging Long-Held Beliefs",
+          "link": "https://www.sciencealert.com/brain-scans-confirm-babies-form-memories-challenging-long-held-beliefs",
+          "domain": "sciencealert.com",
+          "date": "2025-03-21T01:56:47+00:00",
+          "image": "https://kagiproxy.com/img/SPGeHonZicVj3vhoR300HdPTZ5WqBxX4qPke3zG1v-kdDirumfaNK6LNIiTWCIc4hhjUguTAWdc_meJnxSR-R7RApGFQtZ--86X8-GIqUNS7e1sGhc3SkTVbRaMfrOhyLZI",
+          "image_caption": "Brain Scans Confirm Babies Really Are Storing Memories"
+        },
+        {
+          "title": "Why we don’t remember being a baby",
+          "link": "https://english.elpais.com/science-tech/2025-03-20/why-we-dont-remember-being-a-baby.html",
+          "domain": "elpais.com",
+          "date": "2025-03-20T19:53:55+00:00",
+          "image": "https://kagiproxy.com/img/H2PHNM3TIEcS9FyimXGsFxJ46Xp8YOZq1O3nVyCcifLsna3PrLw6rPLbocXyOUbGQaJ42czq0v6x5ck7hhDdwayfsN_tZheA2DEY1LUfG2746FnXGF-LN6ioZ2NcutXnF4R5jdsMnPM_raXCLj9h771V_MRhKiZaNo3rw2b5W1Q98L9ngZlLXqbCVxXpyKzq06yldcICHQoMvVZDTjOyyA37iMfy1qf9Najatzw",
+          "image_caption": "Learning is intense in childhood, but the memories from that stage cannot be recovered in adulthood. (Natalia Lebedinskaia (Getty Images))"
+        },
+        {
+          "title": "Babies can form memories using encoding in the hippocampus that's similar to how adults remember",
+          "link": "https://www.reddit.com/r/science/comments/1jfw4c5/babies_can_form_memories_using_encoding_in_the/",
+          "domain": "reddit.com",
+          "date": "2025-03-20T18:40:45+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Novel memristors to overcome AI's 'catastrophic forgetting'",
+          "link": "https://www.sciencedaily.com/releases/2025/03/250320145042.htm",
+          "domain": "sciencedaily.com",
+          "date": "2025-03-20T18:50:42+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Why don't we remember being a baby? New study provides clues",
+          "link": "https://www.sciencedaily.com/releases/2025/03/250320144619.htm",
+          "domain": "sciencedaily.com",
+          "date": "2025-03-20T18:46:19+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Why Can't We Remember Our Memories as a Baby, if we Make Them?",
+          "link": "https://www.discovermagazine.com/mind/why-cant-we-remember-our-memories-as-a-baby-if-we-make-them",
+          "domain": "discovermagazine.com",
+          "date": "2025-03-20T21:20:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Why don’t we remember being a baby? New clues in memory mystery. - Popular Science",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE10NDA5Sml1cU9pQjJyckVlWXRTTFNfb0hOZzcxQm8xMHYyQTNyUjQ2bTNNSVFJNXZaWTFYY0FabUFsTVZfQnZXRGh2RmllZjZxTURsRXl1aFgzcXlGR2xzc24yTUtmUXh3dnNkaXllMXpxRzFYNXZfVFZn",
+          "domain": "google.com",
+          "date": "2025-03-20T18:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Why don't we remember being babies? Brain scans reveal new clues",
+          "link": "https://www.npr.org/sections/shots-health-news/2025/03/20/nx-s1-5332387/baby-brain-scans-new-clues-infant-memories",
+          "domain": "npr.org",
+          "date": "2025-03-20T20:06:27+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Study offers new clues to why we don’t remember being a baby",
+          "link": "https://cosmosmagazine.com/health/body-and-mind/infant-amnesia-memory/",
+          "domain": "cosmosmagazine.com",
+          "date": "2025-03-21T11:30:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Synaptic architecture of a memory engram in the mouse hippocampus | Science",
+          "link": "https://www.science.org/doi/10.1126/science.ado8316",
+          "domain": "science.org",
+          "date": "2025-03-21T13:01:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Babies form fleeting memories | Science",
+          "link": "https://www.science.org/doi/10.1126/science.adw1923",
+          "domain": "science.org",
+          "date": "2025-03-20T13:01:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Brain Scans of Infants Reveal the Moment We Start Making Memories",
+          "link": "https://singularityhub.com/2025/03/20/new-baby-brain-scans-reveal-the-moment-we-start-making-memories/",
+          "domain": "singularityhub.com",
+          "date": "2025-03-20T18:32:48+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Scientists Reveal Why We Can’t Remember Our Earliest Years",
+          "link": "https://scitechdaily.com/scientists-reveal-why-we-cant-remember-our-earliest-years/",
+          "domain": "scitechdaily.com",
+          "date": "2025-03-20T18:00:51+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Why don’t we remember being a baby? New clues in memory mystery.",
+          "link": "https://www.popsci.com/science/why-dont-i-remember-being-a-baby-study/",
+          "domain": "popsci.com",
+          "date": "2025-03-20T18:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Babies can form memories, and they do it a lot like adults",
+          "link": "https://www.sciencenews.org/article/babies-memories-adult-infantile-amnesia",
+          "domain": "sciencenews.org",
+          "date": "2025-03-20T18:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Brain-Like Memory Chips That Never Forget: New Memristors Could Solve AI’s Amnesia Problem",
+          "link": "https://scienceblog.com/564514/brain-like-memory-chips-that-never-forget-new-memristors-could-solve-ais-amnesia-problem",
+          "domain": "scienceblog.com",
+          "date": "2025-03-20T14:49:12+00:00",
+          "image": "",
+          "image_caption": ""
+        }
+      ],
+      "domains": [
+        {
+          "name": "cosmosmagazine.com",
+          "favicon": "https://kagiproxy.com/img/3Y3n_ArwIGTVVunnXAZMs68_zO7WYjaHNI20LG_Ju4RUecgk_ksyR9wwLSYnc3KshjreIwfL4HH2p3IGx1kfTYqot0I3_KtLZ4bj0Z-PCYZgZXHUWZD3CA"
+        },
+        {
+          "name": "google.com",
+          "favicon": "https://kagiproxy.com/img/5IRPjDCh7rLO_wqnAXv53LkWccub2KGSMPSM5p2rZPuk5L2GQ-PS65um4md0nmbTS74TJGuac69yX6Y7KDoqFppKyaLPJLL1mnS0i-ZL7qs"
+        },
+        {
+          "name": "singularityhub.com",
+          "favicon": "https://kagiproxy.com/img/R1AfHksSEpVIJGoXhkP-p595_LqzdYAAA6WNAjtfFCiJeNSb41ka8JBo6xiI6hmquouvTnERVdQIeZXti0HmHVe2UGT8wUt1U0v7mK0m9inIjtlI3bj86g"
+        },
+        {
+          "name": "scitechdaily.com",
+          "favicon": "https://kagiproxy.com/img/r6d8Ah3q6c4FiPOLtmKMW5Dj499JquRAjuesI90cl2SGvKpvh-E8zz6jcb6XedVBS9dZJ6pvypPCL971lyolk-dfh5Yxj90Pa8VvCrvi83pqTKGFhlw"
+        },
+        {
+          "name": "scienceblog.com",
+          "favicon": "https://kagiproxy.com/img/09yqSnuNSlIokQZDCsl0huoOR3a8kpNM09FGe-cqzsjJM5uoc3CEOm3-Z20NgOLAH2p-g_71UB_2uC_hgTGZeRI-xzv7QV8T3Kr94cZn3DIBPaOfsg"
+        },
+        {
+          "name": "discovermagazine.com",
+          "favicon": "https://kagiproxy.com/img/4bHcVT58Pg_TWeENhqMX-Q50Ljo1piSRq6A2QQpVIHXJLqHtqWC7OzGfMiUe1EtwWq9gMLtRa64W8MEWKzkZLIJfmV1mZ9mYmAGI39J-AhQjNuI9tO5R-l1e"
+        },
+        {
+          "name": "popsci.com",
+          "favicon": "https://kagiproxy.com/img/PAJcU6-XLkBs8akFYcE3GMIgJi_dRYsg8j6srq647GhQNQvnU6SYqSBrz2EiA0Bin75tgzmW1KelLludqL7Fclxc82ab7ViTczWgIHuqhVI"
+        },
+        {
+          "name": "npr.org",
+          "favicon": "https://kagiproxy.com/img/kGBkenVBehwBdqy-UXAXdNFVqDhk-ac1yIoDuxdYEe6MTiHIwverrgghiVNGO40kYslC0WTVfcIcxbTt5ru1bBPEtJZpftOUts5Uphk"
+        },
+        {
+          "name": "sciencedaily.com",
+          "favicon": "https://kagiproxy.com/img/v7OssHJb_ZqeBispiDqYHlyIwXiUTllfzHuO3IyPPDD5iMFz7ZMEN2xuA2gStJwrmdMZdqkztq9UZcxgK3HP4oW_VvpFcjx5ChRkcFZv5YCxSEsngl4"
+        },
+        {
+          "name": "reddit.com",
+          "favicon": "https://kagiproxy.com/img/ArCJJkwvnpM14MDxbpvKH_i2Qf1F8C4JGJUbbwZFlfn52IQxiNoBOs694pmVSooE6v25v0_Gc1vA4kErs8L0inxpseZL0RuH10gJKTwyQGo"
+        },
+        {
+          "name": "sciencealert.com",
+          "favicon": "https://kagiproxy.com/img/Es5arGsz8u5ptd1q8Y4_zaYfQIxgIIlyYthHNZTnRTsMtX0ns6kc1lX9t3vBbHl2r5Z5R91hTGtL9nBxD8y98oI_MF_swHaBNIEGNvXau_7uWIgKDYY"
+        },
+        {
+          "name": "science.org",
+          "favicon": "https://kagiproxy.com/img/oX40Mj7fAmm5c2z1ablGJ6gD4N6PZTM_keAXCJQmAGQC55O17HSjyIe9qaUWVdW0rx1xKZVN_bZFAYr2NyaKHDhCXO22Rz530epZEMSoLAQs"
+        },
+        {
+          "name": "sciencenews.org",
+          "favicon": "https://kagiproxy.com/img/ESkgz0Al1ai1PQEjoKNAGbg6NwqdfEK1bf4lj9r2i1QmNhff1-p2bj1yA92oL9NM2eMgp-VVb3_lnfBnfjbEE7UPRAMW9HtRQpgWif2x6U_kOe_hjQ"
+        },
+        {
+          "name": "elpais.com",
+          "favicon": "https://kagiproxy.com/img/gszScCIkpCt8qdhJHqTE0eJHxL-I5SkjX6uo7W9VOO8AtaT1T2j8_VsqedpJbGy1bZwDLt-T8qky1n3c9NTYYnB9QLxsaPSbxliNAOSanwY"
+        }
+      ]
+    },
+    {
+      "cluster_number": 2,
+      "unique_domains": 11,
+      "number_of_titles": 18,
+      "category": "Glaciology",
+      "title": "Glacier melt threatens water supply for billions",
+      "short_summary": "Scientists and the United Nations are warning that accelerating glacier melt worldwide poses severe risks to the water supply of approximately 2 billion people. According to recent reports highlighted on the first World Day for Glaciers, glaciers are losing ice at unprecedented rates—equivalent to three Olympic-sized swimming pools every second—threatening agriculture, ecosystems, and drinking water sources across multiple continents.",
+      "did_you_know": "Two-thirds of all irrigated agriculture in the world is likely to be affected by receding glaciers and dwindling snowfall in mountain regions.",
+      "talking_points": [
+        "Regional impacts: The Andean glaciers' retreat threatens water supply for 90 million people in South America, while Eastern Africa has lost 80% of its glaciers in some areas.",
+        "European situation: Glaciers in the Alps and Pyrenees have been particularly hard hit, shrinking by approximately 40% in recent years.",
+        "Microbial concern: Scientists have identified that glacier melt is putting unique microbial ecosystems in glacier-fed streams under severe threat.",
+        "Conservation efforts: 2025 has been declared the year of glacier preservation by the UN as scientists work on strategies to save remaining ice masses, including efforts in Switzerland to preserve the Alps' largest glacier."
+      ],
+      "quote": "The world is experiencing an unprecedented rate of glacier melt driven by the climate crisis, which will have unpredictable consequences",
+      "quote_author": "UNESCO report",
+      "quote_source_url": "https://www.theguardian.com/environment/2025/mar/20/glacier-meltdown-risks-food-and-water-supply-of-2bn-people-says-un",
+      "quote_source_domain": "theguardian.com",
+      "location": "",
+      "perspectives": [
+        {
+          "text": "Scientific warning: Climate scientists emphasize that many glaciers will not survive this century given current melting rates, threatening essential water resources.",
+          "sources": [
+            {
+              "name": "Deutsche Welle",
+              "url": "https://www.dw.com/en/how-bad-is-glacier-melt-and-why-does-it-matter/a-71985326"
+            }
+          ]
+        },
+        {
+          "text": "Conservation approach: Some scientists are actively working on intervention strategies to save critical glaciers, as exemplified by Swiss researchers attempting to preserve the Alps' largest glacier despite accelerating ice loss.",
+          "sources": [
+            {
+              "name": "Yahoo News",
+              "url": "https://www.yahoo.com/news/swiss-scientists-hope-save-biggest-153001493.html"
+            }
+          ]
+        },
+        {
+          "text": "Water security concern: University of Sheffield researchers specifically highlight the Andean glacial retreat as threatening water supply for 90 million people in South America, advocating for urgent policy attention.",
+          "sources": [
+            {
+              "name": "Phys.org",
+              "url": "https://phys.org/news/2025-03-andean-glaciers-threaten-million-people.html"
+            }
+          ]
+        },
+        {
+          "text": "Ecosystem focus: Beyond water supply, researchers note that glacier-fed streams contain unique microbial ecosystems that are now under threat, an aspect previously understudied.",
+          "sources": [
+            {
+              "name": "Phys.org",
+              "url": "https://phys.org/news/2025-03-glacier-unique-microbial-ecosystems-threat.html"
+            }
+          ]
+        }
+      ],
+      "emoji": "🧊",
+      "geopolitical_context": "",
+      "historical_background": "",
+      "international_reactions": [
+        "🇺🇳 UNESCO: Hosted the first World Day for Glaciers in Paris and declared 2025 the year of glacier preservation",
+        "🇨🇭 Switzerland: Scientists actively working on intervention strategies to save the country's largest glacier",
+        "🇬🇧 UK: University of Sheffield researchers presenting evidence to policymakers about Andean glacier threats"
+      ],
+      "humanitarian_impact": "Approximately 2 billion people worldwide face potential water insecurity due to glacier retreat, with agricultural systems that provide food for roughly two-thirds of irrigated agriculture globally at risk of disruption as meltwater sources diminish.",
+      "economic_implications": "",
+      "timeline": [
+        "March 21, 2025:: First World Day for Glaciers observed with UNESCO hosting event in Paris",
+        "February 2025:: World Meteorological Organization reports glaciers losing water equivalent to three Olympic pools per second",
+        "1998-2025:: Between one-third and half of Andean glaciers have melted",
+        "Since 1998:: Eastern Africa has lost up to 80% of its glacier coverage in some regions"
+      ],
+      "future_outlook": "",
+      "key_players": [],
+      "technical_details": "",
+      "business_angle_text": "",
+      "business_angle_points": [],
+      "user_action_items": [
+        "Water conservation: Reduce personal water consumption through efficient appliances and mindful usage habits",
+        "Climate advocacy: Support policies aimed at reducing greenhouse gas emissions to slow the rate of glacier melt",
+        "Sustainable tourism: If visiting glacier regions, choose tour operators that follow responsible environmental practices"
+      ],
+      "scientific_significance": [
+        "Data consistency: Multiple studies across different regions confirm accelerating glacier retreat rates, providing strong evidence of global warming impacts on cryospheric systems.",
+        "Unique ecosystems: Recent research reveals previously under-studied impacts on microbial communities in glacier-fed streams, expanding our understanding of biodiversity threats.",
+        "Water security implications: Scientific modeling indicates direct connections between glacier loss and regional water security, with quantifiable impacts on agricultural production and drinking water for billions of people."
+      ],
+      "travel_advisory": [],
+      "destination_highlights": "",
+      "culinary_significance": "",
+      "performance_statistics": [],
+      "league_standings": "",
+      "diy_tips": "",
+      "design_principles": "",
+      "user_experience_impact": "",
+      "gameplay_mechanics": [],
+      "industry_impact": [],
+      "technical_specifications": "",
+      "articles": [
+        {
+          "title": "It's The First World Day For Glaciers – And Scientists Are Concerned",
+          "link": "https://www.sciencealert.com/its-the-first-world-day-for-glaciers-and-scientists-are-concerned",
+          "domain": "sciencealert.com",
+          "date": "2025-03-21T02:34:16+00:00",
+          "image": "https://kagiproxy.com/img/cGGqgzPjynuyZDzVQ6gGMkUkC4OhTGO4GK3B_xGYM9qMe2fJh3nXZ0Bv_9pI5N5M-_14R13YeQAvkoAfJj9mr7vmkP8adAu3iIUkT7RDf_pwsxYq57vT1RHvsWLIa7sMza6-45P390NjvS35ggpCya2cgtOGn23HsvIivEycAA",
+          "image_caption": "It's The First World Day For Glaciers – And Scientists Are Concerned"
+        },
+        {
+          "title": "The world’s glaciers are losing three Olympic-sized swimming pools every second: WMO warns of ‘avalanche of cascading impacts’",
+          "link": "https://english.elpais.com/climate/2025-03-21/the-worlds-glaciers-are-losing-three-olympic-sized-swimming-pools-every-second-wmo-warns-of-avalanche-of-cascading-impacts.html",
+          "domain": "elpais.com",
+          "date": "2025-03-21T09:45:51+00:00",
+          "image": "https://kagiproxy.com/img/ucYW3M7ufxRu6YKs8WkI4gnbgX4Sm1iduxc_dEzXUOfrvL4FpsXTJruXygNvZM4PgdKf6sg6Wbbv7ewGKkQ-s0-HwBcVfS19i7uPgKleFbq8dhuyMOgr05zyWW15jQzOpoAkBgW2Wc9lokUPjyISd-NdneKZ3B63Z-_SL1Vt9LNRjBgh14V8Nj2FZ8YhcdlAKfdoKsWydpSefoppbq3cxmAI2G3X8OuAWvqzcGM",
+          "image_caption": "View of the Vatnajokull glacier and the lake it forms, located south of Reykjavik, Iceland, on February 23, 2025. (Anadolu (Anadolu via Getty Images))"
+        },
+        {
+          "title": "Glacier melt puts unique microbial ecosystems under threat",
+          "link": "https://phys.org/news/2025-03-glacier-unique-microbial-ecosystems-threat.html",
+          "domain": "phys.org",
+          "date": "2025-03-21T14:25:04+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Shrinking Andean glaciers threaten water supply of 90 million people, scientists warn",
+          "link": "https://phys.org/news/2025-03-andean-glaciers-threaten-million-people.html",
+          "domain": "phys.org",
+          "date": "2025-03-21T13:58:04+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "World's glaciers are losing record ice as global temperatures climb, U.N. says - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNLWVhVkRIcDJsWkhOSXo5WGMxOElJVlRxdHVjbXY1UmtyakZqMkI4aUI5bUhSdnJYYjAyU1BZem9tTjFLdUN0Y3ZqLUxJZlY1QW9MSUxGdWhSUXNzR1I5WEJPR2hpZmVUN0t4NWFGS2hsQXZrSnZmcWJNak0yMk5BZTJZcE9laEZLc2FVS2I5Tmp1SHE0OUtJYmswMkZOdXk5OUpSaDlnMm1GbU85QVV1VWxQQS1RN3VlcFh5Ym9aNDdkblJtSURZ",
+          "domain": "google.com",
+          "date": "2025-03-21T01:01:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "New coasts emerging from the retreat of Northern Hemisphere marine-terminating glaciers in the twenty-first century - Nature.com",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9aSUZVc09fdldFb1JmVk4xaFFGbjc0X0lyU1JGTmNtYVB2TE43cnUyUHdiZWM3dVVwcXZaWXdNQWswZExVVlBRTU1XWUpwQjkwUzNiZEtBd09jREp5MnFv",
+          "domain": "google.com",
+          "date": "2025-03-21T10:32:07+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Mount Kenya's glaciers melting away",
+          "link": "https://www.reddit.com/r/environmental_science/comments/1jfwr25/mount_kenyas_glaciers_melting_away/",
+          "domain": "reddit.com",
+          "date": "2025-03-20T19:06:40+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Glacier meltdown risks food and water supply of 2 billion people, says UN",
+          "link": "https://www.theguardian.com/environment/2025/mar/20/glacier-meltdown-risks-food-and-water-supply-of-2bn-people-says-un",
+          "domain": "theguardian.com",
+          "date": "2025-03-20T23:00:42+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Glacier meltdown risks food and water supply of 2 billion people. Eastern Africa has lost 80% of its glaciers in places and, in the Andes, between a third and a half of glaciers have melted since 1998. Glaciers in the Alps and the Pyrenees, the worst affected in Europe, have shrunk by about 40%",
+          "link": "https://www.reddit.com/r/environment/comments/1jgbyrt/glacier_meltdown_risks_food_and_water_supply_of_2/",
+          "domain": "reddit.com",
+          "date": "2025-03-21T08:20:37+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "World's glaciers are losing record ice as global temperatures climb, U.N. says",
+          "link": "https://www.reddit.com/r/environment/comments/1jgi2kx/worlds_glaciers_are_losing_record_ice_as_global/",
+          "domain": "reddit.com",
+          "date": "2025-03-21T14:26:28+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "How bad is glacier melt and why does it matter?",
+          "link": "https://www.dw.com/en/how-bad-is-glacier-melt-and-why-does-it-matter/a-71985326",
+          "domain": "dw.com",
+          "date": "2025-03-21T01:01:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "The UN has declared 2025 as the year of glacier preservation. Here's how to visit one safely - BBC.com",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOEtjX1BmY1hPb1NGQmNwcWhxQXFJVHgzbUw3TjBZX1l3enVXdWM0dE5ieE4zWGJqWm1kM3o4TGxtYVBxbjFfdzFMVjRVR21mcTNiWnRsbGxUTThOdEtUSkFwb2RrVEJYZk13b1ZXQUUySUh6eEt6U0xXWjFqUXVMaHVCYjJoZzJHaldaLXJWUnpCSUhXc1RCeUFxbHpHSVItSE1EUGZwU0p4Znk3aEtGbUFfdUVRaE1J",
+          "domain": "google.com",
+          "date": "2025-03-21T12:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Glacier meltdown risks food and water supply of 2 billion people, says UN | Glaciers",
+          "link": "https://www.reddit.com/r/climate/comments/1jg4q0m/glacier_meltdown_risks_food_and_water_supply_of_2/",
+          "domain": "reddit.com",
+          "date": "2025-03-21T00:53:38+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Glacier melt threatens water supplies for two billion people, UN warns",
+          "link": "https://www.reddit.com/r/climate/comments/1jg4cue/glacier_melt_threatens_water_supplies_for_two/",
+          "domain": "reddit.com",
+          "date": "2025-03-21T00:35:26+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Swiss scientists hope to save biggest glacier in the Alps even as ice loss accelerates",
+          "link": "https://www.yahoo.com/news/swiss-scientists-hope-save-biggest-153001493.html",
+          "domain": "yahoo.com",
+          "date": "2025-03-21T15:30:01+00:00",
+          "image": "",
+          "image_caption": ""
+        }
+      ],
+      "domains": [
+        {
+          "name": "google.com",
+          "favicon": "https://kagiproxy.com/img/QTlXq68D3U-Fn6ezPD0WiZ_94h8gXx8vr6Rqb1VF2-MtLk9j4tAzg3t1p85JexRgMc-2D8S2a-uii3XCHAFh3hu65EjUVCk_6KdS5AVZHGY"
+        },
+        {
+          "name": "yahoo.com",
+          "favicon": "https://kagiproxy.com/img/8Djys7Kpj_IJX4EdxQ-c9vwPVIahlYFST2WkEcNwfcC9FfaUSedXp-MKqGYTx5beIyirKRToSPp_tZQs_OB04tZM3TvCjLZQT_86JH1kWg"
+        },
+        {
+          "name": "theguardian.com",
+          "favicon": "https://kagiproxy.com/img/Mhe74XL7xz_3XTh5SJOgkmRdQiQcaWq1KoB_9Jggdp7KoTeyTmVBLnd_HKSnvzIPKewHXUFpHkSAlUZ3LAA91X8S4XfXnqgNGdsZilnRtns0JhkiQw"
+        },
+        {
+          "name": "dw.com",
+          "favicon": "https://kagiproxy.com/img/4VT4jkC_nWF1594NqzRqd4L0-GrtDEzq6yJY2MPosIVV-4Vlfzr7cyoSuI7TIV2zXnk87sUrEKSaYGDM_0UwjxYLqRLXqN-RzokroQ"
+        },
+        {
+          "name": "reddit.com",
+          "favicon": "https://kagiproxy.com/img/KZTW-4KOqoWjKx7dno3_OygkHfzJqmIcNZpRfBHbEVGuhszwa6r0rHniDUiXLJx5t2IMEykGJmxiLE9jnRN8N6QagYrIpOSJaRw2iAGiMxY"
+        },
+        {
+          "name": "sciencealert.com",
+          "favicon": "https://kagiproxy.com/img/t4C6bFxCYEac-254otu6vsRbtS-3W4VzhXNoJnDmsKzj3308z06gqIRW8Tr4Mm9swYx5V4c6n_OofM3EjguyzRT_PKY8xMTyOTH4C_wRUEdVSBbF7o4"
+        },
+        {
+          "name": "phys.org",
+          "favicon": "https://kagiproxy.com/img/cvlujJ1nBG4xbO9rDz5r7IMWDgwuP456fEf6NAYwOJhMSPLQzzJnjrThcqwuQQ3cZMPpgD5VpOFxIi0m0V05O-ntMdEjMrWLr2UbICAi"
+        },
+        {
+          "name": "elpais.com",
+          "favicon": "https://kagiproxy.com/img/K5Oy-AwEVCMcak6N8ugx4eczngVK78S0aV_yoRIFsaYRtTz8jjGf4hNO5mNa9NgYIJH3ec-TY6a6gPCbWYTMyCSwfoS0RQaN7p4_aWME76g"
+        }
+      ]
+    },
+    {
+      "cluster_number": 3,
+      "unique_domains": 8,
+      "number_of_titles": 8,
+      "category": "Cosmology",
+      "title": "Dark energy may be weakening, reshaping universe's future",
+      "short_summary": "Scientists analyzing data from the Dark Energy Spectroscopic Instrument (DESI), which has created the largest 3D map of the universe using nearly 15 million galaxies and quasars, have found compelling evidence that dark energy—the mysterious force driving the universe's expansion—may be weakening over time. This finding, presented at the American Physical Society's Global Physics Summit, challenges the standard model of cosmology and suggests the universe's expansion may eventually slow down or even reverse.",
+      "did_you_know": "Dark energy makes up approximately 70% of the universe, yet its fundamental nature remains one of the biggest puzzles in modern physics.",
+      "talking_points": [
+        "Collaborative research: DESI's findings were strengthened when combined with data from other major cosmic experiments, providing stronger evidence for evolving dark energy.",
+        "Potential collapse: If dark energy continues to weaken, the universe could eventually stop expanding and potentially collapse in on itself in the distant future.",
+        "Scientific threshold: While the evidence is strengthening, researchers note the findings have not yet reached the statistical threshold required to declare a definitive scientific discovery.",
+        "Model implications: The potential evolution of dark energy would require significant revisions to the standard Lambda Cold Dark Matter model that has guided cosmology for decades.",
+        "Ongoing observations: DESI will continue collecting data through 2026, which may provide more conclusive evidence about dark energy's behavior."
+      ],
+      "quote": "\"What we are seeing is deeply intriguing. It is exciting to think that we may be on the cusp of a major discovery about dark energy and the fundamental nature of our universe.\"",
+      "quote_author": "Alexie Leauthaud-Harnett, University of California, Santa Cruz and co-spokesperson for DESI",
+      "quote_source_url": "https://cosmosmagazine.com/space/astrophysics/dark-energy-data-standard-model-universe/",
+      "quote_source_domain": "cosmosmagazine.com",
+      "location": "Kitt Peak National Observatory, Arizona, USA",
+      "perspectives": [
+        {
+          "text": "Physicists: The evolving dark energy hypothesis provides a compelling explanation for observed cosmic data but requires more evidence to reach discovery threshold.",
+          "sources": [
+            {
+              "name": "Wired",
+              "url": "https://www.wired.com/story/hints-grow-stronger-that-dark-energy-changes-over-time/"
+            }
+          ]
+        },
+        {
+          "text": "Cosmologists: These findings challenge the fundamental Lambda Cold Dark Matter model that has been the standard for understanding cosmic evolution.",
+          "sources": [
+            {
+              "name": "SciTechDaily",
+              "url": "https://scitechdaily.com/is-the-universe-changing-breakthrough-data-suggests-dark-energy-is-evolving/"
+            }
+          ]
+        },
+        {
+          "text": "Australian researchers: This represents \"a major moment for cosmology\" that could fundamentally shift our understanding of the universe's composition and future.",
+          "sources": [
+            {
+              "name": "Cosmos Magazine",
+              "url": "https://cosmosmagazine.com/space/astrophysics/dark-energy-data-standard-model-universe/"
+            }
+          ]
+        }
+      ],
+      "emoji": "🌌",
+      "geopolitical_context": "",
+      "historical_background": "Dark energy was first discovered in 1998 when astronomers studying distant supernovae found the universe's expansion was accelerating rather than slowing down as expected. This discovery revolutionized cosmology and earned the 2011 Nobel Prize in Physics for the researchers who found evidence for this mysterious repulsive force.",
+      "international_reactions": "",
+      "humanitarian_impact": "",
+      "economic_implications": "",
+      "timeline": [
+        "1998:: Astronomers discover dark energy when observing accelerating expansion",
+        "2011:: Nobel Prize awarded for discovery of accelerating expansion",
+        "2021:: DESI begins its five-year survey mission",
+        "March 2025:: DESI releases extensive dataset suggesting dark energy may be weakening"
+      ],
+      "future_outlook": "",
+      "key_players": [],
+      "technical_details": [
+        "Dark energy: The mysterious force that permeates space and drives the accelerating expansion of the universe, accounting for about 70% of the universe's energy content.",
+        "Lambda-CDM model: The standard model of cosmology that assumes dark energy (Lambda) is constant throughout time, which is now being challenged.",
+        "Redshift measurements: DESI analyzes the light from distant objects to determine their distance and motion, creating a 3D map that tracks the universe's expansion history."
+      ],
+      "business_angle_text": "",
+      "business_angle_points": [],
+      "user_action_items": "",
+      "scientific_significance": [
+        "Paradigm shift: If confirmed, dynamical dark energy would require a fundamental revision of the Lambda Cold Dark Matter model, which has been the standard cosmological framework for decades.",
+        "Statistical confidence: While multiple datasets show consistent hints of evolving dark energy, the current evidence falls short of the \"5-sigma\" statistical threshold required to claim a definitive discovery in physics.",
+        "Methodological strength: DESI's map represents an unprecedented dataset combining observations of nearly 15 million galaxies and quasars, providing the most detailed view of large-scale cosmic structure ever created."
+      ],
+      "travel_advisory": [],
+      "destination_highlights": "",
+      "culinary_significance": "",
+      "performance_statistics": [],
+      "league_standings": "",
+      "diy_tips": "",
+      "design_principles": "",
+      "user_experience_impact": "",
+      "gameplay_mechanics": [],
+      "industry_impact": [],
+      "technical_specifications": "",
+      "articles": [
+        {
+          "title": "Dark energy is even stranger than we thought, new 3D map of the universe suggests. 'What a time to be alive!' (video)",
+          "link": "https://www.space.com/the-universe/dark-energy-is-even-stranger-than-we-thought-new-3d-map-of-the-universe-suggests-what-a-time-to-be-alive-video",
+          "domain": "space.com",
+          "date": "2025-03-20T14:00:00+00:00",
+          "image": "https://kagiproxy.com/img/1yUOMwuot5Xafohe7Z8MO4ZyEhS4PxoOpq9_xCfgBnIeKSO0J4HJ4e8aAwD7Ap564JBZuuWppaqNRc1EjzOa_xAPdyZNh9Js_PwZ0oOgmkrGs_IdLBiCog",
+          "image_caption": "(Mains) Two ‘fans’ correspond to the two main areas DESI has observed above and below the plane of our Milky Way. (Inset) Nicholas U. Mayall 4-meter Telescope at Kitt Peak National Observatory (KPNO) (DESI Collaboration /DOE /KPNO /NOIRLab /NSF /AURA/L. Tyas/R. Proctor)"
+        },
+        {
+          "title": "Dark energy is weakening and the universe could (eventually) collapse, study says",
+          "link": "https://www.npr.org/2025/03/20/nx-s1-5333843/dark-energy-weakening-universe-collapse-desi",
+          "domain": "npr.org",
+          "date": "2025-03-20T17:38:11+00:00",
+          "image": "https://kagiproxy.com/img/4nlJo5b2bseBO3B4l0J5wRS1sAx7lToY2syo1hDImYshQX-PLkizes_Dnan6vq8cQAT-E7G_SlU00UpbECgKp9MQiUuvU0odiyfk6JkHZEh2vDdxBFxKriWkCrfDBa6D7qn0omp7bgTDCkf1IUfk3pq3JyyQGSghclNnfA2oaUPBvkbcuEbHut8fSTB8Ih7rRuPl51w_aeq5o8bVmwnljFBU9S5YbmIBqwHi-TpLUDRn982GZeRGWenMEALsFGYp54T9ZbDkATD4irDFeNHAKtkpPtWBpvsWGuWhuTtVnEcNNYivEHKDjBrJNAlEG1s-",
+          "image_caption": "This multi-wavelength image from NASA shows a universe full of galaxies that are various shapes, colors and sizes. Most are small while a handful are somewhat larger. A few stars are also scattered across the image."
+        },
+        {
+          "title": "Dark energy is weakening and the universe could (eventually) collapse, study says - NPR",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQm5fSzRuaUNzanprZmZfR3dlS3p2TnF6Mnd4VVFUWnkzSmV6cEVjRjJuUy1aRTlhRUFTbEpQVkZYV055TFhHVkVXdkpmTHVuZDZzTmkxMFloSVB2V01waGptOTd0bGJyM1FyTDUtaDBZeWRqSEJoc1F4eV9YeVZWeHJrSlE5VnB6V2Y4c3FXSEU5MzQ",
+          "domain": "google.com",
+          "date": "2025-03-20T17:38:11+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "New DESI results strengthen hints that dark energy may evolve",
+          "link": "https://www.sciencedaily.com/releases/2025/03/250320214311.htm",
+          "domain": "sciencedaily.com",
+          "date": "2025-03-21T01:43:11+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Physics on the cusp of a major discovery about dark energy and the fundamental nature of our universe",
+          "link": "https://cosmosmagazine.com/space/astrophysics/dark-energy-data-standard-model-universe/",
+          "domain": "cosmosmagazine.com",
+          "date": "2025-03-20T14:35:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Dark energy seems to be changing, rattling our view of universe",
+          "link": "https://charmingscience.com/dark-energy-seems-to-be-changing-rattling-our-view-of-universe/",
+          "domain": "charmingscience.com",
+          "date": "2025-03-20T15:31:28+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Evidence Grows That Dark Energy Changes Over Time",
+          "link": "https://www.wired.com/story/hints-grow-stronger-that-dark-energy-changes-over-time/",
+          "domain": "wired.com",
+          "date": "2025-03-20T22:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Is the Universe Changing? Breakthrough Data Suggests Dark Energy Is Evolving",
+          "link": "https://scitechdaily.com/is-the-universe-changing-breakthrough-data-suggests-dark-energy-is-evolving/",
+          "domain": "scitechdaily.com",
+          "date": "2025-03-21T08:23:51+00:00",
+          "image": "",
+          "image_caption": ""
+        }
+      ],
+      "domains": [
+        {
+          "name": "cosmosmagazine.com",
+          "favicon": "https://kagiproxy.com/img/60VgojKk13V4mDlaYnXOG9k_ARWiNBSQU-lfrhCFoopoMv08MqmIYjNDJ6MFtXhkByVrutoQUoV5C_U39yHuTkttSFBrPc7AgmVQupnEa4o5iDio9iyXAA"
+        },
+        {
+          "name": "google.com",
+          "favicon": "https://kagiproxy.com/img/PzVLbyTL9hkaM5s-2MXiW0S7TvlMZzGT3roEVcSqMYcJvourEfAb0FfoX1JSWdnfuZiMR3FB6bsLqFjyewfzZvG_pW-jBAl_JxzUt29-P5A"
+        },
+        {
+          "name": "scitechdaily.com",
+          "favicon": "https://kagiproxy.com/img/EHogK7FgZsw_F50b4VFRlIVoaKQrzDyLj96RamQOX-Xz08NZqIRbpZoP6zhaePKzMPW2DzCPWeE7wbULGsmCIuXgdJMHycvbgmFRI1xNu-DcfwG74VI"
+        },
+        {
+          "name": "wired.com",
+          "favicon": "https://kagiproxy.com/img/vijlvkufMEqk3ZEsItFxDLqYlNdLdiMzySOdrvd59YGv0TOm-JjHSkdxFzQcN78hAs2Ulg3cPColMpimXcs0af6w40vh6uIg10iqTW7aAg"
+        },
+        {
+          "name": "npr.org",
+          "favicon": "https://kagiproxy.com/img/sSrIXx2cD9Gd7kSUlhbKBL2voLdnyRLpxfeRzA90QBrAqGq7iP0qOaBl3WVe501Y31K1a6W7Bd182kGEbWejijtVge_vWpLAr0x-5JA"
+        },
+        {
+          "name": "sciencedaily.com",
+          "favicon": "https://kagiproxy.com/img/xN3t-dE9H3pfHa3xuHTgj0feMJdLebZPs1eYscjTUXGsltxcrQcbdVAWh1NYzwYHlQi18mJnRI7uf0Ml2Estp9BmqChi7Q_0HTmrrY6BhUniVgj6ZLI"
+        },
+        {
+          "name": "space.com",
+          "favicon": "https://kagiproxy.com/img/Bj2FIAhEiIc1Qs7Bh7oZEKNHr4H88B_iCqUcoZEehXR-0SOon4XuBMwwjvdMmz0I4Ceu6hpXt4H5FQTG0CLXCxS2vYDJq1DcXXKIjKTXfA"
+        },
+        {
+          "name": "charmingscience.com",
+          "favicon": "https://kagiproxy.com/img/HtMwx8VSoyytX1wnVzrJju24IRnF8oGvOOHKAvoXwFaHTTbAOBBq9YfZw1NnZ7PwDF6TFlSuq4uGtkh-S7K6FVz8UEnUQlvlwIKh0nMEvfeB8CsvbqgLuvQ"
+        }
+      ]
+    },
+    {
+      "cluster_number": 4,
+      "unique_domains": 6,
+      "number_of_titles": 6,
+      "category": "Sharks",
+      "title": "Octopus spotted riding world's fastest shark",
+      "short_summary": "Researchers in New Zealand recently captured rare footage of an octopus riding atop a shortfin mako shark, considered the world's fastest shark species. Meanwhile, separate shark research reveals new insights into great hammerhead migration patterns linked to dietary preferences, and scientists have developed methods to study shark diets using preserved jaw specimens.",
+      "did_you_know": "Shortfin mako sharks can reach speeds of up to 45 miles per hour, making them the fastest-swimming sharks in the world.",
+      "talking_points": [
+        "Unusual interaction: The octopus was observed as a colorful blob on the mako shark's head in New Zealand's Hauraki Gulf, revealing an unexpected relationship between these marine species.",
+        "Hammerhead behavior: Some great hammerhead sharks migrate seasonally to the US east coast while others remain near the Bahamas year-round, with their movement patterns potentially influenced by their food preferences.",
+        "Research innovation: Scientists have developed techniques to study shark diets using preserved jaw specimens, helping overcome challenges in collecting samples from rare or protected shark species."
+      ],
+      "quote": "",
+      "quote_author": "",
+      "quote_source_url": "",
+      "quote_source_domain": "",
+      "location": "Hauraki Gulf, New Zealand",
+      "perspectives": [],
+      "emoji": "🦈",
+      "geopolitical_context": "",
+      "historical_background": "",
+      "international_reactions": "",
+      "humanitarian_impact": "",
+      "economic_implications": "",
+      "timeline": "",
+      "future_outlook": "",
+      "key_players": [],
+      "technical_details": "",
+      "business_angle_text": "",
+      "business_angle_points": [],
+      "user_action_items": "",
+      "scientific_significance": [
+        "Novel observation: The octopus-shark interaction documented in New Zealand represents an unusual behavior that adds to our understanding of interspecies relationships in marine ecosystems.",
+        "Diet-migration connection: The research linking hammerhead shark migration patterns to dietary preferences advances our understanding of how food resources influence large marine predator movements and habitat selection.",
+        "Methodological advancement: The technique to study shark diets using preserved jaw specimens addresses a significant challenge in shark research, allowing scientists to gather crucial data without needing fresh samples from rare or protected species."
+      ],
+      "travel_advisory": [],
+      "destination_highlights": "",
+      "culinary_significance": "",
+      "performance_statistics": [],
+      "league_standings": "",
+      "diy_tips": "",
+      "design_principles": "",
+      "user_experience_impact": "",
+      "gameplay_mechanics": [],
+      "industry_impact": [],
+      "technical_specifications": "",
+      "articles": [
+        {
+          "title": "Video Shows an Octopus Riding a Mako Shark Near New Zealand",
+          "link": "https://www.nytimes.com/2025/03/20/science/octopus-riding-shark-new-zealand.html",
+          "domain": "nytimes.com",
+          "date": "2025-03-20T12:50:21+00:00",
+          "image": "https://kagiproxy.com/img/MYUDyrG1cevvJzqcu2OZcsdj235ULd8-7mZETU62hel31J21ezFt3hIr9lF-OuoIqJhWkyz2VewCNjWvM-4-BU4_aaLaC9JP9EZHvHFvmTAxLPrPRo-AbedIvZ2pylkl7IeIDacDTYEdAw3jXU7ZElUkcRrUsYDb99KmqRUE-NfcXq8Glk4r3qY-6kxbp8gH0-W4IOo",
+          "image_caption": "Shark with an Octopus on it in the Hauraki Gulf off New Zealand (Esther Stuck and Wednesday Davis, University of Auckland)"
+        },
+        {
+          "title": "Octopus spotted riding on top of world's fastest shark",
+          "link": "https://www.livescience.com/animals/sharks/octopus-spotted-riding-on-top-of-worlds-fastest-shark",
+          "domain": "livescience.com",
+          "date": "2025-03-20T18:30:00+00:00",
+          "image": "https://kagiproxy.com/img/QHMswC5SCKK6TZXr5-jq_nU8MXbHW2IlCUSu9xY4uZIzTb7ZHUIws99zi8fWZ2pAhqF8S0oUQqpgZJEHkGcpvt7uwgC0a2QXfGRa39lOY3OxObYQF-DRdw",
+          "image_caption": "The oddity of an octopus riding a shark. (Wednesday Davis)"
+        },
+        {
+          "title": "Preserved shark jaws unlock secrets of past diets",
+          "link": "https://phys.org/news/2025-03-shark-jaws-secrets-diets.html",
+          "domain": "phys.org",
+          "date": "2025-03-21T15:10:01+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "While Some Great Hammerhead Sharks Migrate, Others Stick to Their Neighborhood",
+          "link": "https://www.technologynetworks.com/applied-sciences/news/while-some-great-hammerhead-sharks-migrate-others-stick-to-their-neighborhood-397496",
+          "domain": "technologynetworks.com",
+          "date": "2025-03-21T00:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Hammerhead sharks’ diets may affect if they roam or stay home",
+          "link": "https://www.sciencenews.org/article/hammerhead-shark-diets-migration",
+          "domain": "sciencenews.org",
+          "date": "2025-03-21T05:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Preserved shark jaws can reveal diet history",
+          "link": "https://www.scimex.org/newsfeed/preserved-shark-jaws-can-reveal-diet-history",
+          "domain": "scimex.org",
+          "date": "2025-03-20T22:30:00+00:00",
+          "image": "",
+          "image_caption": ""
+        }
+      ],
+      "domains": [
+        {
+          "name": "scimex.org",
+          "favicon": "https://kagiproxy.com/img/ww1SUpjAoR3AsGJzdDPU-87e-nqNW9iCpsEVNkFHrbuw2Zb1eqPFJbtAss24kAU0IGI9_wn8LtHenla9qmimP9Cpv6RD6PK--a-SrJGxmcs"
+        },
+        {
+          "name": "livescience.com",
+          "favicon": "https://kagiproxy.com/img/ydOOtrQyG745khuCubiS5D8yybNKzg8dlFlvZOWnCmQUM1HUJ9lPIqXS1cBn-YFotP8SeTfJ8AXvhG-9HFqhDlXioA2v91YwZf3ctvVMEHt4N-i7iw"
+        },
+        {
+          "name": "technologynetworks.com",
+          "favicon": "https://kagiproxy.com/img/_kNnKZiAU1vI9KPL9xE44YD8n7G9xtI8JNSuEABrYidcePgOVno7F7USGybcmEjpP-rORIRkBq9K4zOlZRfUw_TFxygY-i78JqQpSwDiL4Kb0k9vOn0AhagdmvQ"
+        },
+        {
+          "name": "phys.org",
+          "favicon": "https://kagiproxy.com/img/pmhbhOMZlgsdT_VFV0ZSm0apQpj3l30qKzwlivhv0awgbdjQ5RjENwO6y9yZTysXlLYerPgGT-wjpArvZuOXggfIVNrIWKVJz2mV5kIH"
+        },
+        {
+          "name": "nytimes.com",
+          "favicon": "https://kagiproxy.com/img/BUEmpcf-_Zhk2KkovrfcuE7TQQtfGcYMcxT8ajZGrx4A7qEs-vyP7tiNJyR76LKW-Cn6ZJTT5HqrMxPx-n4H1TtxvVBF-fuqJCejolFbHGU9"
+        },
+        {
+          "name": "sciencenews.org",
+          "favicon": "https://kagiproxy.com/img/Ku8tuMfqsezvhyaFlAQ8f1QHPQbaR8gUNS5dTL54p4c2gaxHVYksx8um79LFHqjHSVnMlgx8dULUN1cc8M8vWJZNgGg3jmBzCeskYbynWYIsJZdH7w"
+        }
+      ]
+    },
+    {
+      "cluster_number": 5,
+      "unique_domains": 6,
+      "number_of_titles": 7,
+      "category": "Neuroscience",
+      "title": "Brain treatment breakthroughs transform neurological care",
+      "short_summary": "Recent neuroscience advancements have opened new possibilities for treating conditions like stroke, epilepsy, and age-related memory decline. Researchers have developed specialized drugs that repair brain damage after stroke, improved MRI technology to detect previously hidden epilepsy-causing lesions, and discovered methods to enhance the brain's waste removal system to potentially restore memory in aging brains.",
+      "did_you_know": "In England, epileptic seizures are the sixth most common reason for hospital admission, with approximately 360,000 people in the UK suffering from focal epilepsy.",
+      "talking_points": [
+        "Stroke treatment advancement: Scientists have developed a drug that mimics rehabilitation by targeting brain rhythms, potentially helping patients regain movement after stroke damage.",
+        "Enhanced imaging technology: Ultra-powerful 7T MRI scanners using new techniques can now identify previously undetectable brain lesions in patients with treatment-resistant epilepsy.",
+        "Brain waste removal: Researchers found that improving the brain's lymphatic vessels, which help clear waste, boosted memory in older mice, suggesting a potential pathway for treating age-related cognitive decline.",
+        "Aging brain intervention: Multiple strategies can counteract brain aging, with new research highlighting the importance of maintaining the brain's waste disposal system for cognitive health."
+      ],
+      "quote": "",
+      "quote_author": "",
+      "quote_source_url": "",
+      "quote_source_domain": "",
+      "location": "",
+      "perspectives": [],
+      "emoji": "🧠",
+      "geopolitical_context": "",
+      "historical_background": "",
+      "international_reactions": "",
+      "humanitarian_impact": "",
+      "economic_implications": "",
+      "timeline": [
+        "Early research:: Scientists identify brain rhythms as critical to rehabilitation after stroke",
+        "Recent advancement:: Researchers develop drug that mimics rehabilitation by targeting these rhythms",
+        "2025:: New MRI techniques at Addenbrooke's Hospital identify hidden epilepsy-causing lesions"
+      ],
+      "future_outlook": "",
+      "key_players": [],
+      "technical_details": [
+        "7T MRI scanners: Ultra-powerful magnetic resonance imaging devices (named for their 7 Tesla magnetic field strength) that can detect minute structural differences in brain tissue not visible with standard equipment.",
+        "Lymphatic vessels: Part of the body's waste removal system that exists around the brain, helping clear out potentially harmful substances that can accumulate with age.",
+        "Blood-brain barrier: A protective boundary that prevents many substances from entering brain tissue, making it challenging to deliver treatments directly to the brain."
+      ],
+      "business_angle_text": "",
+      "business_angle_points": [],
+      "user_action_items": "",
+      "scientific_significance": [
+        "Treatment paradigm shift: These findings represent a departure from traditional neurological treatments by targeting peripheral systems (lymphatic vessels) or using imaging technology to identify previously invisible lesions, showing how indirect approaches can yield significant brain benefits.",
+        "Cross-disciplinary implications: The discoveries bridge multiple neuroscience domains (stroke rehabilitation, epilepsy treatment, and cognitive aging), suggesting common mechanisms that might lead to integrated treatment approaches.",
+        "Translational potential: While some findings are still limited to animal models (particularly the lymphatic vessel research), the MRI techniques for epilepsy are already being implemented in clinical settings, demonstrating rapid bench-to-bedside translation."
+      ],
+      "travel_advisory": [],
+      "destination_highlights": "",
+      "culinary_significance": "",
+      "performance_statistics": [],
+      "league_standings": "",
+      "diy_tips": "",
+      "design_principles": "",
+      "user_experience_impact": "",
+      "gameplay_mechanics": [],
+      "industry_impact": [],
+      "technical_specifications": "",
+      "articles": [
+        {
+          "title": "Scientists Uncover a Hidden Brain Plumbing System That Restores Memory",
+          "link": "https://scitechdaily.com/scientists-uncover-a-hidden-brain-plumbing-system-that-restores-memory/",
+          "domain": "scitechdaily.com",
+          "date": "2025-03-21T15:00:54+00:00",
+          "image": "https://kagiproxy.com/img/_kE3OUYh27d7WeKEdHrdb1slInRlRf_rLtJZZ5eILK_L_x7ZjZiecT4EKHfBFpaTlgRSefxbECJZCfPArz9vdSVRn1oJvh9i1vikq4ZFA2i1E3gxcDquueS6aMXVWXthDaOdoxUNhJ0enopQGynyhhAK9mK6aoDKBMrP",
+          "image_caption": "Boosting Brain Waste Removal System Improves Memory"
+        },
+        {
+          "title": "First Drug That Repairs Brain Damage After Stroke. It Mimics Rehabilitation",
+          "link": "https://www.zmescience.com/medicine/drug-repairs-brain-damage-stroke/",
+          "domain": "zmescience.com",
+          "date": "2025-03-20T22:31:27+00:00",
+          "image": "https://kagiproxy.com/img/7USiepwzOGe-Sp2u_E_AbLpsRgDN5IblvsdwLWgusx1U6MiN1LxTXktEfhVNOohbGwrcLUT7GliwFXaTaN3oZ3E1tmQUzHMxC-wwLDVrMnrfI7y5C_CVqZfpfuzegj9WQtMOnLvVZC1tDXk_OuZwROBh_hEN1Z1ZFeLHverNrbmgXaXsv4E4Mi4Itcg67bLuVXs8Zz7yALkgcKzjpkXaYYsEPHyxRwfcBhlH5Ly4G1_ZmEJD7rN5JuR9nO7WZM36",
+          "image_caption": ""
+        },
+        {
+          "title": "Revolutionary MRI Tech Unmasks Hidden Brain Lesions and Transforms Epilepsy Treatment",
+          "link": "https://scitechdaily.com/revolutionary-mri-tech-unmasks-hidden-brain-lesions-and-transforms-epilepsy-treatment/",
+          "domain": "scitechdaily.com",
+          "date": "2025-03-20T23:01:25+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "New brain scan method could help people with drug-resistant epilepsy",
+          "link": "https://www.theguardian.com/society/2025/mar/21/new-brain-scan-method-could-help-people-with-drug-resistant-epilepsy",
+          "domain": "theguardian.com",
+          "date": "2025-03-21T05:00:50+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Aging Brain’s Trash Collection System Holds Key to Memory Restoration",
+          "link": "https://scienceblog.com/564527/aging-brains-trash-collection-system-holds-key-to-memory-restoration",
+          "domain": "scienceblog.com",
+          "date": "2025-03-21T15:24:26+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Why you should slow down your brain’s ageing – and how to do it",
+          "link": "https://www.newscientist.com/article/2473036-why-you-should-slow-down-your-brains-ageing-and-how-to-do-it/",
+          "domain": "newscientist.com",
+          "date": "2025-03-21T07:00:16+00:00",
+          "image": "",
+          "image_caption": ""
+        }
+      ],
+      "domains": [
+        {
+          "name": "scitechdaily.com",
+          "favicon": "https://kagiproxy.com/img/xnzKRCms7eXI3GWrX64KexGtYvZ6Vgbi5_PK43MF2-q-B7J1kfeKSbZO59d4jUB5O0KD0dh71niJr9Vd2FNhyOALDzdw_Tnef3YNqIabYvpEy5RSzBM"
+        },
+        {
+          "name": "theguardian.com",
+          "favicon": "https://kagiproxy.com/img/a7hLB_-48m0jM2Y64cf6W8mJd5DsJhXCz9Gy1XHbWoNHekAHZ_H2XfrA1HfYZGeZNRendn_00rlVOj3G3ryJ_qg2DD-5TevI7fBzNHXC6cQguC5Gvw"
+        },
+        {
+          "name": "scienceblog.com",
+          "favicon": "https://kagiproxy.com/img/xCIbXAKZ_V9aPxD_1siEUvnKoSzbvx78Uauj0DKGKxX5c8QwVsbH_KfPm1C8Al7crHIFEULPB1wIzRWCXTXgQZMqO8X-t85u_F1rvEPyfoB89pOqyA"
+        },
+        {
+          "name": "newscientist.com",
+          "favicon": "https://kagiproxy.com/img/VyMtlaNfOURu1yApuSxptKLqBLSNMQxMKVkTOMSRrZtHVpGF-ZEN7mk11IHguTYpaVeLJcR3chdP_ah4v4Fdsii7yu-dBkfwMfyGnnLNHpBKtb7NTac"
+        },
+        {
+          "name": "zmescience.com",
+          "favicon": "https://kagiproxy.com/img/KXFb64_y276nkYiHvaSOjfyxhPQON3VISglZpvM3i3gGUe_p9jxk9bTl3VO-w1odFMYC-VlLl7K5frwVUVOzWlgOIhm1Vs7Rpj_Qr3_2W36-zzjs"
+        }
+      ]
+    },
+    {
+      "cluster_number": 6,
+      "unique_domains": 6,
+      "number_of_titles": 9,
+      "category": "Quantum",
+      "title": "Breakthroughs advance global quantum communication networks",
+      "short_summary": "Scientists have achieved several significant breakthroughs in quantum communication technology, including a Chinese-South African team setting a distance record of 10,000 kilometers for quantum-secured satellite communication. Researchers have also developed new interconnect devices that enable direct communication between multiple quantum processors and demonstrated high-fidelity remote entanglement between trapped atoms, all crucial steps toward building practical quantum networks and computers.",
+      "did_you_know": "The Barcelona Supercomputing Center, housed in a deconsecrated church that previously contained the MareNostrum supercomputers, is now home to Spain's first publicly accessible quantum computer built with 100% European technology.",
+      "talking_points": [
+        "Satellite milestone: Chinese researchers broke the quantum communication distance record using a microsatellite and portable ground stations, demonstrating secure quantum communication over 10,000 kilometers.",
+        "Processor connectivity: MIT researchers developed a photon-shuttling \"interconnect\" device that enables \"all-to-all\" communication between quantum processors, overcoming limitations of point-to-point architectures.",
+        "Entanglement advances: Scientists achieved high-fidelity remote entanglement between trapped atoms using time-bin photons, a critical capability for building networked quantum processors.",
+        "Technical innovations: Researchers created a wireless terahertz cryogenic interconnect that minimizes heat transfer in quantum processors, addressing a key challenge in quantum computing."
+      ],
+      "quote": "",
+      "quote_author": "",
+      "quote_source_url": "",
+      "quote_source_domain": "",
+      "location": "",
+      "perspectives": [
+        {
+          "text": "Chinese research team: The achievement of quantum-secured satellite communication over unprecedented distances represents a significant step toward a global quantum network capable of ultra-secure information transfer.",
+          "sources": [
+            {
+              "name": "Daily Sabah",
+              "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMWZ5ZTVtVFJSYmNnWWZRRGxXeWwxSWp4eTI1WmZITUJPYTBLaEo5Y09Za183QWN6UnFYX0hWU1VYSXY1QmJZVUNEZjF3VmV2bVhBSEIxZWhIb3NvRll4RjZUeHlmbDlSRzNtbGRSRHVwODNfSnBKWnN2ZGFzT0tnUWdZV2h6eXBmNzFXR01FU1RyU0tq0gGaAUFVX3lxTE9FcXE0blpKLWpQRkQ5bVJQQjFOTmdVWjM1Y2lCUUE2d0pqVFBMMlVOSE5rOUZxeFk3SlQyVEhLZ0VXaFJiemdhaFR6Ty1EVlVUSlYtM2pFcl9TdFVwczk4X1lndERWeTRiU1pQUzJKWFdUcHlNQ3FRQlR4U3YwWm5weWZJOW1JVU9fU2p4ZXVKMmlKYlJKS0NqSlE"
+            }
+          ]
+        },
+        {
+          "text": "MIT researchers: The development of scalable \"all-to-all\" communication between quantum processors represents a fundamental architectural improvement over current point-to-point systems that accumulate errors.",
+          "sources": [
+            {
+              "name": "Phys.org",
+              "url": "https://phys.org/news/2025-03-photon-shuttling-interconnection-device-enables.html"
+            }
+          ]
+        },
+        {
+          "text": "European quantum initiative: Building publicly accessible quantum computers with 100% European technology is essential for technological sovereignty and advancing quantum research capabilities.",
+          "sources": [
+            {
+              "name": "El País",
+              "url": "https://english.elpais.com/eps/2025-03-20/this-is-how-a-quantum-computer-is-built.html"
+            }
+          ]
+        }
+      ],
+      "emoji": "🌐",
+      "geopolitical_context": "",
+      "historical_background": "Quantum communication research has been advancing steadily since the early 2000s, with China launching the world's first quantum satellite (Micius) in 2016, which demonstrated quantum key distribution over 1,200 kilometers. The development of practical quantum networks has been hindered by challenges in maintaining quantum coherence over distance and efficiently connecting quantum processors.",
+      "international_reactions": "",
+      "humanitarian_impact": "",
+      "economic_implications": "",
+      "timeline": "",
+      "future_outlook": "",
+      "key_players": [],
+      "technical_details": [
+        "Quantum entanglement: A phenomenon where quantum particles become correlated such that the quantum state of each particle cannot be described independently, enabling instantaneous correlation of information across distances.",
+        "Quantum key distribution: A secure communication method that uses quantum mechanics principles to establish encryption keys between distant parties, theoretically immune to computational attacks.",
+        "Superconducting waveguide: A specialized wire that can transmit microwave photons carrying quantum information between processors while maintained at extremely low temperatures to preserve quantum states."
+      ],
+      "business_angle_text": "",
+      "business_angle_points": [],
+      "user_action_items": "",
+      "scientific_significance": [
+        "Practical application: The Chinese-South African satellite experiment demonstrates that lightweight, low-cost quantum communication systems can function at global distances, bringing commercial applications closer to reality than previously thought possible.",
+        "Architecture breakthrough: MIT's interconnect device addresses one of quantum computing's fundamental scaling challenges by enabling efficient communication between multiple processors without compounding error rates, potentially accelerating the development of practical quantum computers.",
+        "Technical constraints: Despite these advances, quantum systems still face significant challenges including the need for extreme cooling, error correction, and scalability; the terahertz cryogenic interconnect represents an important step in addressing the thermal management issues."
+      ],
+      "travel_advisory": [],
+      "destination_highlights": "",
+      "culinary_significance": "",
+      "performance_statistics": [],
+      "league_standings": "",
+      "diy_tips": "",
+      "design_principles": "",
+      "user_experience_impact": "",
+      "gameplay_mechanics": [],
+      "industry_impact": [
+        "Cybersecurity evolution: These quantum communication breakthroughs could fundamentally transform secure communications, making conventional encryption methods obsolete while creating new ultra-secure alternatives.",
+        "Computing paradigm shift: The interconnect technologies address key bottlenecks in quantum computing architecture, potentially accelerating development of practical quantum computers that could revolutionize fields from materials science to drug discovery.",
+        "Commercial viability: The demonstration of quantum communication with smaller, lightweight satellites suggests more cost-effective deployment of quantum networks may be possible sooner than previously anticipated."
+      ],
+      "technical_specifications": "",
+      "articles": [
+        {
+          "title": "This is how a quantum computer is built",
+          "link": "https://english.elpais.com/eps/2025-03-20/this-is-how-a-quantum-computer-is-built.html",
+          "domain": "elpais.com",
+          "date": "2025-03-20T17:18:32+00:00",
+          "image": "https://kagiproxy.com/img/YbrL4Nb349g2Im3VMbu9H_4L_ofQNr0dDJTJW-2zDb5hahHH9BvGpadNx23KxHnJFpG0Fjbu5ZSeJ0Y1WBruq0kMdaErTncyFba4E6hk2FtToXcN3f3ZA_P7wDMevWw5jbVyO02n6GT82gghDXShlnt896xrFw-5RO6WtGa9dTlqs2kobxfXfSK10TNmVPa1WUTqDME-yrUaLuIobkf2uXZMabYSLO_1UEn_nA8",
+          "image_caption": "The five-qubit quantum chip, before being installed in the Barcelona Supercomputing Center (BSC). (Vicens Giménez (EL PAÍS))"
+        },
+        {
+          "title": "Is this quantum microsatellite the start of a global network? A Chinese-South African team tested the idea - Researchers used a small, light device and portable ground stations to set a record in communications",
+          "link": "https://www.reddit.com/r/Futurology/comments/1jghkt3/is_this_quantum_microsatellite_the_start_of_a/",
+          "domain": "reddit.com",
+          "date": "2025-03-21T14:04:23+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Low-noise transducers can bridge the gap between microwave and optical qubits - Phys.org",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8yQUdmVVloeDNqZjNJdUx4cGJBV3NXMjF6US1BOGZIQWRFRXFvaHFDdThRd0NDWUpjTGhZdVZBNXlNUFRXTnkzZEZhekhJenNZWWNhaW5WdVBORXJwSGl4RjBDMExJbVFDSU9oREpXcDhya1k5dVRIRTFHd3pMd9IBfEFVX3lxTE9oZ3ZmdDZoLTJoaWEyQXQ5S3oyNlpQUkNtT1VYQXRuMGVfYi1KdmNHYm9Dd1NfNXVZWER2NkR3NGhXNTZqbFFKZk04SGZzQnlOcjVJS1c0Y3ptR3hqTHlCVFl0MkJxcEwzWkVlUkNUdU10UFNuX3lpS3dyek8",
+          "domain": "google.com",
+          "date": "2025-03-20T14:41:35+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "China breaks quantum communication distance record | Daily Sabah - Daily Sabah",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMWZ5ZTVtVFJSYmNnWWZRRGxXeWwxSWp4eTI1WmZITUJPYTBLaEo5Y09Za183QWN6UnFYX0hWU1VYSXY1QmJZVUNEZjF3VmV2bVhBSEIxZWhIb3NvRll4RjZUeHlmbDlSRzNtbGRSRHVwODNfSnBKWnN2ZGFzT0tnUWdZV2h6eXBmNzFXR01FU1RyU0tq0gGaAUFVX3lxTE9FcXE0blpKLWpQRkQ5bVJQQjFOTmdVWjM1Y2lCUUE2d0pqVFBMMlVOSE5rOUZxeFk3SlQyVEhLZ0VXaFJiemdhaFR6Ty1EVlVUSlYtM2pFcl9TdFVwczk4X1lndERWeTRiU1pQUzJKWFdUcHlNQ3FRQlR4U3YwWm5weWZJOW1JVU9fU2p4ZXVKMmlKYlJKS0NqSlE",
+          "domain": "google.com",
+          "date": "2025-03-20T12:30:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Isolated atoms, but entangled - Science",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBlNFVZaGV0ZTVCdnRTVTdfeGJCSzhYUXJQZXFNaEpHWUxLTTk5WEVEcXM0eXZQSUM5S1VsSC1TalFPbjhEN1lwWmsxYVlzcFJvTzN2RE5rOWJxUUFEck1HYQ",
+          "domain": "google.com",
+          "date": "2025-03-20T18:11:11+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Wireless terahertz cryogenic interconnect minimizes heat-to-information transfer in quantum processors",
+          "link": "https://phys.org/news/2025-03-wireless-terahertz-cryogenic-interconnect-minimizes.html",
+          "domain": "phys.org",
+          "date": "2025-03-21T12:00:02+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Isolated atoms, but entangled | Science",
+          "link": "https://www.science.org/doi/10.1126/science.adw2572",
+          "domain": "science.org",
+          "date": "2025-03-20T13:01:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Device enables direct communication among multiple quantum processors",
+          "link": "https://news.mit.edu/2025/device-enables-direct-communication-among-multiple-quantum-processors-0321",
+          "domain": "mit.edu",
+          "date": "2025-03-21T10:00:00+00:00",
+          "image": "",
+          "image_caption": ""
+        },
+        {
+          "title": "Photon-shuttling interconnection device enables direct communication among multiple quantum processors",
+          "link": "https://phys.org/news/2025-03-photon-shuttling-interconnection-device-enables.html",
+          "domain": "phys.org",
+          "date": "2025-03-21T10:00:03+00:00",
+          "image": "",
+          "image_caption": ""
+        }
+      ],
+      "domains": [
+        {
+          "name": "google.com",
+          "favicon": "https://kagiproxy.com/img/07wXrBhn1uD3W-1-yACQ0Udj6xeD9oqFcTtO7rjJZHC-QC_U_Dq4y6J6Ar3uU9Uw2L-G-ipcxj8K0k3zAqgRpS4mHzQG07j0X31-vkYhHuI"
+        },
+        {
+          "name": "reddit.com",
+          "favicon": "https://kagiproxy.com/img/cmNplXvM4uC5E41CNKJ9jmPp5Gh8qR5BtLpPuE-5YTWe6Y3mxhHxFbEwWf9G-lDzjEhdS2k_24JlcNx-WIvDLo7AQYcgJu7J1OGaadsbSRs"
+        },
+        {
+          "name": "phys.org",
+          "favicon": "https://kagiproxy.com/img/-3vXF_UbycnUnGLtLzoGwaNjf9ebT_TX5NxhZs3ZPaO6XO1Lm4kCBw2qmC7pZxXI7RsWmy-mbkryCdZCjq_uA2CLDL7o0zbZFLw0jEUb"
+        },
+        {
+          "name": "science.org",
+          "favicon": "https://kagiproxy.com/img/BuHPGjRnNpWIun6wDr1bZFW7MF1orMFN9jRTeYMiSv3OjcvUOk_TEBfhjhtpheta_bmXXHEFLWSi0fQFg6PG2vByxP23VGQEA9Hd4GrfMSel"
+        },
+        {
+          "name": "mit.edu",
+          "favicon": "https://kagiproxy.com/img/ucqIF5CKUSxHHGFqn2m7f3UkYOEKqWPWMVKu_vf7TbahW3fO3jdCPeevOn0ncCp6sE2kbGJl9qTItnuEaw8tqOB0M0p4uVETFOq6BNM"
+        },
+        {
+          "name": "elpais.com",
+          "favicon": "https://kagiproxy.com/img/GwbZ_yB6phEY4lLjEbLnpHu2gixS5OWcz4dhI_sP1asZxQisJc9XphdSND5KNIzuHpOlEQ6jY-NU2uCpAQ2q4dWGqEo1Mi-JHpSaarqypwQ"
+        }
+      ]
+    }
+  ]
+}
