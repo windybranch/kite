@@ -3,9 +3,16 @@ import 'package:flutter/material.dart';
 import '../logic/categories.dart';
 
 class CategoriesView extends StatelessWidget {
-  const CategoriesView(this.categories, {super.key});
+  const CategoriesView(
+    this.categories,
+    this.selected, {
+    this.onSelected,
+    super.key,
+  });
 
   final List<Category> categories;
+  final Category selected;
+  final ValueChanged<Category>? onSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +24,14 @@ class CategoriesView extends StatelessWidget {
         final item = categories[index];
         return Padding(
           padding: EdgeInsets.only(right: 8.0),
-          child: Chip(
+          child: ChoiceChip(
+            showCheckmark: false,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100.0),
             ),
             label: Text(item.name),
+            selected: selected == item,
+            onSelected: (selected) => selected ? onSelected?.call(item) : null,
           ),
         );
       },
