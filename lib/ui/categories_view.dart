@@ -10,11 +10,19 @@ class CategoriesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      scrollDirection: Axis.horizontal,
       itemCount: categories.length,
       itemBuilder: (context, index) {
         final item = categories[index];
-        return ListTile(
-          title: Text(item.name),
+        return Padding(
+          padding: EdgeInsets.only(right: 8.0),
+          child: Chip(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(100.0),
+            ),
+            label: Text(item.name),
+          ),
         );
       },
     );
