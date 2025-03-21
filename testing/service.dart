@@ -23,20 +23,39 @@ class FakeLoader implements AssetLoader {
   }
 }
 
-class FakeService implements Service {
-  bool fail;
+/// Enum to determine fail state for testing purposes.
+enum Fail {
+  none,
+  categories,
+  articles,
+  all;
 
-  FakeService({this.fail = false});
+  bool get forArticles => this == Fail.articles || this == Fail.all;
+}
+
+class FakeService implements Service {
+  Fail fail;
+
+  FakeService([this.fail = Fail.none]);
 
   @override
   AsyncResult<List<CategoryModel>> fetchCategories() {
-    return fail
-        ? Future.value(Failure(Exception('failed to fetch categories')))
-        : Future.value(Success(kCategoryModels));
+    final e = Exception('failed to fetch categories');
+
+    return switch (fail) {
+      Fail.categories || Fail.all => Future.value(Failure(e)),
+      _ => Future.value(Success(kCategoryModels)),
+    };
   }
 
   @override
   AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) {
+    if (fail.forArticles) {
+      final e = Exception('failed to fetch articles');
+
+      return Future.value(Failure(e));
+    }
+
     return switch (category.name) {
       kWorldCategory => Future.value(Success(kArticleModels)),
       _ => Future.value(Success([])),

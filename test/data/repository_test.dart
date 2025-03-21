@@ -56,7 +56,7 @@ void main() {
       });
 
       when('the repository fails to load', () {
-        final service = FakeService(fail: true);
+        final service = FakeService(Fail.categories);
         final repository = CacheRepository(service);
         late Result<List<Category>> result;
 
@@ -87,7 +87,7 @@ void main() {
           fetched.addAll(categories!);
 
           // Verify the cache by forcing the service to error.
-          service.fail = true;
+          service.fail = Fail.categories;
           result = await repository.loadCategories();
           result.isSuccess().should.beTrue();
           final cachedCategories = result.getOrNull();
