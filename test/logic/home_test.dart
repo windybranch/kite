@@ -7,9 +7,9 @@ import 'package:result_dart/result_dart.dart';
 import 'package:shouldly/shouldly.dart';
 
 const _kCategories = [
-  Category('Technology'),
-  Category('Science'),
-  Category('Sports'),
+  Category('Technology', []),
+  Category('Science', []),
+  Category('Sports', []),
 ];
 
 class FakeRepository implements Repository {

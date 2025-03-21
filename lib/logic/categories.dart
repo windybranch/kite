@@ -1,16 +1,25 @@
+import 'dart:collection';
+
 import 'package:equatable/equatable.dart';
+
+import 'article.dart';
 
 /// Represents a category of articles.
 ///
 /// Holds a list of [Article]s for the given category.
-class Category with EquatableMixin {
-  const Category(this._name);
+final class Category with EquatableMixin {
+  const Category(this.name, this._articles);
 
-  final String _name;
+  /// The name of the category.
+  ///
+  /// e.g. "Technology", "Science", "World"
+  final String name;
 
-  /// Returns the name of the category.
-  String get name => _name;
+  final List<Article> _articles;
+
+  /// The articles for the category.
+  UnmodifiableListView<Article> get articles => UnmodifiableListView(_articles);
 
   @override
-  List<Object?> get props => [_name];
+  List<Object?> get props => [name, _articles];
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:result_command/result_command.dart';
 
 import '../logic/home.dart';
 
@@ -19,7 +20,10 @@ class HomeScreen extends StatelessWidget {
             }
 
             if (model.load.isFailure) {
-              return const Center(child: Text('Error'));
+              return Center(
+                child:
+                    Text((model.load.value as FailureCommand).error.toString()),
+              );
             }
 
             return ListView.builder(
