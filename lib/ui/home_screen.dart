@@ -37,10 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
 
-            return Column(
-              children: [
-                Flexible(
-                  child: CategoriesView(
+            return CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  floating: true,
+                  forceMaterialTransparency: true,
+                  flexibleSpace: CategoriesView(
                     widget.model.categories,
                     selected ?? widget.model.categories.first,
                     onSelected: (category) {
@@ -50,11 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
-                Expanded(
-                  child: ArticlesView(
-                    selected ?? widget.model.categories.first,
-                  ),
-                ),
+                ArticlesView(selected ?? widget.model.categories.first),
               ],
             );
           },
