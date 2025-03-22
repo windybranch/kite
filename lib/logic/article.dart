@@ -51,6 +51,11 @@ final class Article with EquatableMixin {
   /// A fact related to the article (Did you know?).
   final String fact;
 
+  /// Estimates reading time of the article.
+  int readTime() {
+    throw UnimplementedError('readTime() is not implemented');
+  }
+
   @override
   List<Object?> get props => [
         group,
