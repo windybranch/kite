@@ -1,39 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:result_command/result_command.dart';
 
+import '../logic/categories.dart';
 import '../logic/home.dart';
+import 'articles_view.dart';
+import 'categories_view.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.model});
 
   final HomeViewModel model;
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  Category? selected;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: ListenableBuilder(
-          listenable: model.load,
+          listenable: widget.model.load,
           builder: (context, _) {
-            if (model.load.isRunning) {
+            if (widget.model.load.isRunning) {
               return const Center(child: CircularProgressIndicator());
             }
 
-            if (model.load.isFailure) {
+            if (widget.model.load.isFailure) {
               return Center(
-                child:
-                    Text((model.load.value as FailureCommand).error.toString()),
+                child: Text((widget.model.load.value as FailureCommand)
+                    .error
+                    .toString()),
               );
             }
 
-            return ListView.builder(
-              itemCount: model.categories.length,
-              itemBuilder: (context, index) {
-                final item = model.categories[index];
-                return ListTile(
-                  title: Text(item.name),
-                );
-              },
+            return CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  floating: true,
+                  forceMaterialTransparency: true,
+                  flexibleSpace: CategoriesView(
+                    widget.model.categories,
+                    selected ?? widget.model.categories.first,
+                    onSelected: (category) {
+                      setState(() {
+                        selected = category;
+                      });
+                    },
+                  ),
+                ),
+                ArticlesView(selected ?? widget.model.categories.first),
+              ],
             );
           },
         ),
