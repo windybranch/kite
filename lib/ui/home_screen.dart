@@ -36,14 +36,39 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
 
-            return CategoriesView(
-              widget.model.categories,
-              selected ?? widget.model.categories.first,
-              onSelected: (category) {
-                setState(() {
-                  selected = category;
-                });
-              },
+            return Column(
+              children: [
+                Flexible(
+                  child: CategoriesView(
+                    widget.model.categories,
+                    selected ?? widget.model.categories.first,
+                    onSelected: (category) {
+                      setState(() {
+                        selected = category;
+                      });
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: selected?.articles.length ??
+                        widget.model.categories.first.articles.length,
+                    itemBuilder: (context, index) {
+                      final category =
+                          selected ?? widget.model.categories.first;
+                      final item = category.articles[index];
+
+                      return ListTile(
+                        title: Padding(
+                          padding: const EdgeInsets.only(bottom: 4.0),
+                          child: Text(item.title),
+                        ),
+                        subtitle: Text(item.group),
+                      );
+                    },
+                  ),
+                )
+              ],
             );
           },
         ),
