@@ -3,6 +3,7 @@ import 'package:result_command/result_command.dart';
 
 import '../logic/categories.dart';
 import '../logic/home.dart';
+import 'articles_view.dart';
 import 'categories_view.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,24 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Expanded(
-                  child: ListView.builder(
-                    itemCount: selected?.articles.length ??
-                        widget.model.categories.first.articles.length,
-                    itemBuilder: (context, index) {
-                      final category =
-                          selected ?? widget.model.categories.first;
-                      final item = category.articles[index];
-
-                      return ListTile(
-                        title: Padding(
-                          padding: const EdgeInsets.only(bottom: 4.0),
-                          child: Text(item.title),
-                        ),
-                        subtitle: Text(item.group),
-                      );
-                    },
+                  child: ArticlesView(
+                    selected ?? widget.model.categories.first,
                   ),
-                )
+                ),
               ],
             );
           },
