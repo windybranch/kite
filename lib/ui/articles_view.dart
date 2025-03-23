@@ -198,6 +198,8 @@ class _DetailView extends StatelessWidget {
                       ),
                       Spacing.s16,
                       _HighlightsCard(article.highlights),
+                      Spacing.s16,
+                      _QuoteCard(article.quote),
                     ],
                   ),
                 ]),
@@ -267,6 +269,56 @@ class _HighlightsCard extends StatelessWidget {
                     ],
                   ),
                 )),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _QuoteCard extends StatelessWidget {
+  const _QuoteCard(this.quote, {super.key});
+
+  final Quote quote;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card.filled(
+      margin: EdgeInsets.zero,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12.0,
+          vertical: 16.0,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleButton(
+              icon: LucideIcons.quote,
+              color: Colours.iconButton,
+              backgroundColor: Colours.iconButtonBg,
+              onPressed: () {},
+            ),
+            Spacing.s12,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4.0, right: 4.0),
+                    child: Text(
+                      quote.content,
+                      style: Styles.body,
+                    ),
+                  ),
+                  Spacing.s4,
+                  Text(
+                    '—${quote.author}',
+                    style: Styles.metadata,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
