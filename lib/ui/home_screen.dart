@@ -37,27 +37,49 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
 
-            return CustomScrollView(
-              slivers: [
-                SliverAppBar(
-                  floating: true,
-                  forceMaterialTransparency: true,
-                  flexibleSpace: CategoriesView(
-                    widget.model.categories,
-                    selected ?? widget.model.categories.first,
-                    onSelected: (category) {
-                      setState(() {
-                        selected = category;
-                      });
-                    },
-                  ),
-                ),
-                ArticlesView(selected ?? widget.model.categories.first),
-              ],
+            return _SuccessView(
+              widget.model.categories,
+              selected ?? widget.model.categories.first,
+              (category) {
+                setState(() {
+                  selected = category;
+                });
+              },
             );
           },
         ),
       ),
+    );
+  }
+}
+
+class _SuccessView extends StatelessWidget {
+  const _SuccessView(
+    this._categories,
+    this.selected,
+    this.onSelected, {
+    super.key,
+  });
+
+  final Category selected;
+  final List<Category> _categories;
+  final ValueChanged<Category> onSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          floating: true,
+          forceMaterialTransparency: true,
+          flexibleSpace: CategoriesView(
+            _categories,
+            selected,
+            onSelected: onSelected,
+          ),
+        ),
+        ArticlesView(selected),
+      ],
     );
   }
 }
