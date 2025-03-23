@@ -47,6 +47,6 @@ class HomeViewModel {
   ///
   /// Currently a wrapper around the load command.
   Future<void> retry() {
-    throw UnimplementedError();
+    return load.execute();
   }
 }
