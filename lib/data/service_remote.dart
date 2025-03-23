@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:http/http.dart' as http;
 import 'package:kite/data/article.dart';
 
 import 'package:kite/data/categories.dart';
 import 'package:result_dart/result_dart.dart';
 
+import 'parse.dart';
 import 'service.dart';
 
 /// Provides getters for HTTP status codes.
@@ -31,7 +34,21 @@ class RemoteService implements Service {
   }
 
   @override
-  AsyncResult<List<CategoryModel>> fetchCategories() {
+  AsyncResult<List<CategoryModel>> fetchCategories() async {
+    final response = await _client.get(Uri.parse(_Url.categories));
+
+    if (response.statusCode == HttpStatus.ok) {
+      final json = response.body;
+      final parser = Parser();
+      try {
+        final categories = await parser.parseCategories(json);
+        return Future.value(Success(categories));
+      } on Exception catch (e) {
+        log('error parsing categories $e');
+        // TODO: handle the exception
+      }
+    }
+
     // TODO: implement fetchCategories
     throw UnimplementedError();
   }
