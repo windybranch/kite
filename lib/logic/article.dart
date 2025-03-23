@@ -52,8 +52,46 @@ final class Article with EquatableMixin {
   final String fact;
 
   /// Estimates reading time of the article.
+  ///
+  /// Based on average reading speed of 200 words per minute.
+  /// Average adult reads 238 wpm silent; 183 wpm aloud.
+  ///
+  /// Rounded to the nearest minute.
   int readTime() {
-    throw UnimplementedError('readTime() is not implemented');
+    // Calculate read time based on content length and reading speed
+    const readingSpeed = 200; // words per minute
+
+    int count = 0;
+
+    count += group.split(' ').length;
+    count += title.split(' ').length;
+    count += summary.split(' ').length;
+    count += quote.author.split(' ').length;
+    count += quote.content.split(' ').length;
+    count += background.split(' ').length;
+    count += fact.split(' ').length;
+
+    for (final h in highlights) {
+      count += h.title.split(' ').length;
+      count += h.content.split(' ').length;
+    }
+
+    for (final p in perspectives) {
+      count += p.title.split(' ').length;
+      count += p.text.split(' ').length;
+    }
+
+    for (final r in reactions) {
+      count += r.title.split(' ').length;
+      count += r.content.split(' ').length;
+    }
+
+    for (final e in timeline) {
+      count += e.date.split(' ').length;
+      count += e.title.split(' ').length;
+    }
+
+    return (count / readingSpeed).ceil();
   }
 
   @override
