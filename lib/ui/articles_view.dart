@@ -122,6 +122,8 @@ class _DetailView extends StatelessWidget {
 
   final Article article;
 
+  static const _buttonCloseText = 'Done reading';
+
   /// Displays the article in a bottom sheet.
   static Future<_DetailView?> show(BuildContext context, Article article) {
     return showModalBottomSheet<_DetailView>(
@@ -205,6 +207,16 @@ class _DetailView extends StatelessWidget {
                       Spacing.s24,
                       _FactCard(article.fact),
                       Spacing.s24,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          FilledButton(
+                            child: Text(_buttonCloseText),
+                            onPressed: () => Navigator.of(context).pop(),
+                          ),
+                        ],
+                      ),
+                      Spacing.s8,
                     ],
                   ),
                 ]),
