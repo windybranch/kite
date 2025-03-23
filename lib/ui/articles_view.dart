@@ -5,6 +5,7 @@ import '../config/theme.dart';
 import '../logic/article.dart';
 import '../logic/categories.dart';
 import 'core/circle_button.dart';
+import 'core/spacing.dart';
 
 class ArticlesView extends StatelessWidget {
   const ArticlesView(this.category, {super.key});
@@ -87,14 +88,14 @@ class _SummaryView extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 4),
+              Spacing.s4,
               Flexible(
                 child: Text(
                   title,
                   style: Styles.title,
                 ),
               ),
-              SizedBox(height: 8),
+              Spacing.s8,
               Row(
                 spacing: 4,
                 children: [
@@ -114,7 +115,7 @@ class _SummaryView extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              Spacing.s16,
               Divider(
                 color: Colors.grey.shade200,
               ),
@@ -200,17 +201,17 @@ class _DetailView extends StatelessWidget {
                         ),
                         side: BorderSide(color: Colors.grey.shade300),
                       ),
-                      SizedBox(height: 4),
+                      Spacing.s4,
                       Text(
                         article.title,
                         style: Styles.title,
                       ),
-                      SizedBox(height: 16),
+                      Spacing.s16,
                       Text(
                         article.summary,
                         style: Styles.body,
                       ),
-                      SizedBox(height: 16),
+                      Spacing.s16,
                       _HighlightsCard(article.highlights),
                     ],
                   ),
@@ -245,7 +246,7 @@ class _HighlightsCard extends StatelessWidget {
               _highlightsTitle,
               style: Styles.subtitle,
             ),
-            SizedBox(height: 16),
+            Spacing.s16,
             ...highlights.map((h) => Padding(
                   padding: const EdgeInsets.only(bottom: 12.0),
                   child: Column(
