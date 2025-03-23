@@ -64,11 +64,11 @@ class _SummaryView extends StatelessWidget {
                   Chip(
                     label: Text(
                       group,
-                      style: TextStyle(color: Colors.grey.shade600),
+                      style: Styles.chip,
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 2.0),
                     visualDensity: VisualDensity.compact,
-                    side: BorderSide(color: Colors.grey.shade300),
+                    side: BorderSide(color: Colours.chipBorder),
                   ),
                   CircleAvatar(
                     backgroundColor: Colors.grey.shade200,
@@ -98,23 +98,18 @@ class _SummaryView extends StatelessWidget {
                 children: [
                   Icon(
                     LucideIcons.hourglass,
-                    color: Colors.grey.shade400,
+                    color: Colours.icon,
                     size: 18,
                   ),
                   Text(
                     '$readTime $_timeToReadText',
-                    style: TextStyle(
-                      color: Colors.grey.shade400,
-                      letterSpacing: -0.5,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                    ),
+                    style: Styles.metadata,
                   ),
                 ],
               ),
               Spacing.s16,
               Divider(
-                color: Colors.grey.shade200,
+                color: Colours.divider,
               ),
             ],
           ),
@@ -167,8 +162,8 @@ class _DetailView extends StatelessWidget {
                 child: Row(children: [
                   CircleButton(
                     icon: LucideIcons.x,
-                    color: Colors.grey.shade600,
-                    backgroundColor: Colors.grey.shade200,
+                    color: Colours.iconButton,
+                    backgroundColor: Colours.iconButtonBg,
                     onPressed: () => Navigator.of(context).pop(),
                   ),
                 ]),
@@ -271,7 +266,7 @@ class _HighlightsCard extends StatelessWidget {
                       // Don't display divider after last highlight
                       if (h != highlights[highlights.length - 1])
                         Divider(
-                          color: Colors.grey.shade200,
+                          color: Colours.divider,
                         ),
                     ],
                   ),

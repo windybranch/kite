@@ -8,6 +8,8 @@ abstract final class Styles {
   static const subtitle = _h2;
   static const minititle = _h3;
   static const body = _p1;
+  static final chip = _b2;
+  static final metadata = _p2;
 
   static const _h1 = TextStyle(
     fontWeight: FontWeight.w700,
@@ -36,6 +38,26 @@ abstract final class Styles {
     fontSize: 16,
     height: 1.2,
   );
+
+  static final _p2 = TextStyle(
+    color: Colors.grey.shade400,
+    letterSpacing: -0.5,
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+
+  static final _b2 = TextStyle(color: Colors.grey.shade600);
+}
+
+/// Defines the app colours.
+extension Colours on Colors {
+  static const primary = Colors.black;
+  static final secondary = Colors.grey.shade300;
+  static final divider = Colors.grey.shade200;
+  static final chipBorder = Colors.grey.shade300;
+  static final icon = Colors.grey.shade400;
+  static final iconButton = Colors.grey.shade600;
+  static final iconButtonBg = Colors.grey.shade200;
 }
 
 /// Confirguation for the app theme.
@@ -43,7 +65,7 @@ abstract class AppTheme {
   /// The default theme.
   static final theme = ThemeData(
     colorScheme: _colorScheme,
-    primaryColor: Colors.black,
+    primaryColor: Colours.primary,
     highlightColor: Colors.grey.shade200,
     cardTheme: _cardTheme,
     chipTheme: _chipTheme,
@@ -51,8 +73,8 @@ abstract class AppTheme {
   );
 
   static final _colorScheme = ColorScheme.fromSeed(
-    seedColor: Colors.black,
-    primary: Colors.black,
+    seedColor: Colours.primary,
+    primary: Colours.primary,
     secondary: Colors.grey.shade300,
   );
 
