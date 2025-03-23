@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../config/theme.dart';
 import '../logic/article.dart';
@@ -335,6 +336,17 @@ class _PerspectivesCard extends StatelessWidget {
 
   static const _perspectivesTitle = 'Perspectives';
 
+  String _domain(String url) {
+    final uri = Uri.parse(url);
+    final host = uri.host;
+
+    if (host.startsWith('www.')) {
+      return host.substring(4);
+    }
+
+    return host;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card.filled(
@@ -389,6 +401,29 @@ class _PerspectivesCard extends StatelessWidget {
                                       child: Text(
                                         perspective.text,
                                         style: Styles.body,
+                                      ),
+                                    ),
+                                    Spacing.s8,
+                                    ...perspective.sources.map(
+                                      (s) => GestureDetector(
+                                        onTap: () async {
+                                          await launchUrl(Uri.parse(s.url));
+                                        },
+                                        child: Row(
+                                          spacing: 4,
+                                          children: [
+                                            Icon(
+                                              LucideIcons.arrowUpRightSquare,
+                                              color: Colours.icon,
+                                              size: 18,
+                                            ),
+                                            Text(
+                                              _domain(s.url),
+                                              style: Styles.metadata,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
