@@ -51,7 +51,10 @@ class _SummaryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+        vertical: 12.0,
+      ),
       child: Row(children: [
         Flexible(
           child: Column(
@@ -70,22 +73,15 @@ class _SummaryView extends StatelessWidget {
                     visualDensity: VisualDensity.compact,
                     side: BorderSide(color: Colours.chipBorder),
                   ),
-                  CircleAvatar(
+                  CircleButton.tight(
+                    icon: LucideIcons.check,
+                    color: Colors.white,
                     backgroundColor: Colors.grey.shade200,
-                    radius: 14,
-                    child: IconButton(
-                      padding: EdgeInsets.zero,
-                      iconSize: 16,
-                      icon: Icon(
-                        LucideIcons.check,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                    ),
+                    onPressed: () {},
                   ),
                 ],
               ),
-              Spacing.s4,
+              Spacing.s8,
               Flexible(
                 child: Text(
                   title,
