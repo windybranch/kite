@@ -13,7 +13,7 @@ const _kCategories = [
 ];
 
 class FakeRepository implements Repository {
-  final bool fail;
+  bool fail;
 
   FakeRepository({this.fail = false});
 
@@ -55,6 +55,29 @@ void main() {
 
         then('the categories are empty', () {
           model.categories.should.beEmpty();
+        });
+      });
+    });
+
+    given('the categories fail to load first time', () {
+      const categories = _kCategories;
+      final repo = FakeRepository(fail: true);
+      final model = HomeViewModel(repo: repo);
+
+      before(() async {
+        await model.load.execute();
+        model.load.isFailure.should.beTrue();
+      });
+
+      when('retrying', () {
+        before(() async {
+          repo.fail = false;
+          await model.retry();
+          model.load.isSuccess.should.beTrue();
+        });
+
+        then('the categories are loaded', () {
+          model.categories.should.be(categories);
         });
       });
     });

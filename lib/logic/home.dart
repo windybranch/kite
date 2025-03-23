@@ -42,4 +42,11 @@ class HomeViewModel {
 
     return Success(unit);
   }
+
+  /// Retry loading the categories.
+  ///
+  /// Currently a wrapper around the load command.
+  Future<void> retry() {
+    return load.execute();
+  }
 }
