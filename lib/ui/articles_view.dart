@@ -200,6 +200,8 @@ class _DetailView extends StatelessWidget {
                       _HighlightsCard(article.highlights),
                       Spacing.s16,
                       _QuoteCard(article.quote),
+                      Spacing.s16,
+                      _PerspectivesCard(article.perspectives),
                     ],
                   ),
                 ]),
@@ -317,6 +319,88 @@ class _QuoteCard extends StatelessWidget {
                     style: Styles.metadata,
                   ),
                 ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _PerspectivesCard extends StatelessWidget {
+  const _PerspectivesCard(this.perspectives, {super.key});
+
+  final List<Perspective> perspectives;
+
+  static const _perspectivesTitle = 'Perspectives';
+
+  @override
+  Widget build(BuildContext context) {
+    return Card.filled(
+      margin: EdgeInsets.zero,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Text(
+                _perspectivesTitle,
+                style: Styles.subtitle,
+              ),
+            ),
+            Spacing.s16,
+            Flexible(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                scrollDirection: Axis.horizontal,
+                child: IntrinsicHeight(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ...perspectives.map(
+                        (perspective) => Padding(
+                          padding: const EdgeInsets.only(right: 12.0),
+                          child: SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            child: Card.filled(
+                              margin: EdgeInsets.zero,
+                              color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 20.0,
+                                  vertical: 20.0,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Icon(LucideIcons.sparkle),
+                                    Spacing.s8,
+                                    Text(
+                                      perspective.title,
+                                      style: Styles.minititle,
+                                    ),
+                                    Spacing.s8,
+                                    Flexible(
+                                      child: Text(
+                                        perspective.text,
+                                        style: Styles.body,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
