@@ -5,6 +5,7 @@ import '../config/theme.dart';
 import '../logic/article.dart';
 import '../logic/categories.dart';
 import 'core/circle_button.dart';
+import 'core/spacing.dart';
 
 class ArticlesView extends StatelessWidget {
   const ArticlesView(this.category, {super.key});
@@ -50,7 +51,10 @@ class _SummaryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+        vertical: 12.0,
+      ),
       child: Row(children: [
         Flexible(
           child: Column(
@@ -63,60 +67,45 @@ class _SummaryView extends StatelessWidget {
                   Chip(
                     label: Text(
                       group,
-                      style: TextStyle(color: Colors.grey.shade600),
+                      style: Styles.chip,
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 2.0),
                     visualDensity: VisualDensity.compact,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100.0),
-                    ),
-                    side: BorderSide(color: Colors.grey.shade300),
+                    side: BorderSide(color: Colours.chipBorder),
                   ),
-                  CircleAvatar(
+                  CircleButton.tight(
+                    icon: LucideIcons.check,
+                    color: Colors.white,
                     backgroundColor: Colors.grey.shade200,
-                    radius: 14,
-                    child: IconButton(
-                      padding: EdgeInsets.zero,
-                      iconSize: 16,
-                      icon: Icon(
-                        LucideIcons.check,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                    ),
+                    onPressed: () {},
                   ),
                 ],
               ),
-              SizedBox(height: 4),
+              Spacing.s8,
               Flexible(
                 child: Text(
                   title,
                   style: Styles.title,
                 ),
               ),
-              SizedBox(height: 8),
+              Spacing.s8,
               Row(
                 spacing: 4,
                 children: [
                   Icon(
                     LucideIcons.hourglass,
-                    color: Colors.grey.shade400,
+                    color: Colours.icon,
                     size: 18,
                   ),
                   Text(
                     '$readTime $_timeToReadText',
-                    style: TextStyle(
-                      color: Colors.grey.shade400,
-                      letterSpacing: -0.5,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                    ),
+                    style: Styles.metadata,
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              Spacing.s16,
               Divider(
-                color: Colors.grey.shade200,
+                color: Colours.divider,
               ),
             ],
           ),
@@ -135,7 +124,6 @@ class _DetailView extends StatelessWidget {
   static Future<_DetailView?> show(BuildContext context, Article article) {
     return showModalBottomSheet<_DetailView>(
       isScrollControlled: true,
-      backgroundColor: Colors.transparent,
       context: context,
       builder: (context) {
         return _DetailView(article);
@@ -170,8 +158,8 @@ class _DetailView extends StatelessWidget {
                 child: Row(children: [
                   CircleButton(
                     icon: LucideIcons.x,
-                    color: Colors.grey.shade600,
-                    backgroundColor: Colors.grey.shade200,
+                    color: Colours.iconButton,
+                    backgroundColor: Colours.iconButtonBg,
                     onPressed: () => Navigator.of(context).pop(),
                   ),
                 ]),
@@ -193,24 +181,22 @@ class _DetailView extends StatelessWidget {
                           article.group,
                           style: TextStyle(color: Colors.grey.shade600),
                         ),
+                        backgroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(horizontal: 2.0),
                         visualDensity: VisualDensity.compact,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(100.0),
-                        ),
                         side: BorderSide(color: Colors.grey.shade300),
                       ),
-                      SizedBox(height: 4),
+                      Spacing.s4,
                       Text(
                         article.title,
                         style: Styles.title,
                       ),
-                      SizedBox(height: 16),
+                      Spacing.s16,
                       Text(
                         article.summary,
                         style: Styles.body,
                       ),
-                      SizedBox(height: 16),
+                      Spacing.s16,
                       _HighlightsCard(article.highlights),
                     ],
                   ),
@@ -234,10 +220,12 @@ class _HighlightsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card.filled(
-      color: Colors.grey.shade50,
       margin: EdgeInsets.zero,
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12.0,
+          vertical: 16.0,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -245,7 +233,7 @@ class _HighlightsCard extends StatelessWidget {
               _highlightsTitle,
               style: Styles.subtitle,
             ),
-            SizedBox(height: 16),
+            Spacing.s16,
             ...highlights.map((h) => Padding(
                   padding: const EdgeInsets.only(bottom: 12.0),
                   child: Column(
@@ -274,7 +262,7 @@ class _HighlightsCard extends StatelessWidget {
                       // Don't display divider after last highlight
                       if (h != highlights[highlights.length - 1])
                         Divider(
-                          color: Colors.grey.shade200,
+                          color: Colours.divider,
                         ),
                     ],
                   ),

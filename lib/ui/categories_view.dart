@@ -25,10 +25,6 @@ class CategoriesView extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.only(right: 8.0),
           child: ChoiceChip(
-            showCheckmark: false,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(100.0),
-            ),
             label: Text(item.name),
             selected: selected == item,
             onSelected: (selected) => selected ? onSelected?.call(item) : null,

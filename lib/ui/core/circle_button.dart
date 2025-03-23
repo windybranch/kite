@@ -7,7 +7,18 @@ class CircleButton extends StatelessWidget {
     required this.onPressed,
     this.color = Colors.black,
     this.backgroundColor = Colors.grey,
-  });
+  })  : _height = 35,
+        _width = 35;
+
+  /// Reduces the diameter of the background circle.
+  const CircleButton.tight({
+    super.key,
+    required this.icon,
+    required this.onPressed,
+    this.color = Colors.black,
+    this.backgroundColor = Colors.grey,
+  })  : _height = 30,
+        _width = 30;
 
   /// The icon to be displayed inside the button.
   final IconData icon;
@@ -21,11 +32,14 @@ class CircleButton extends StatelessWidget {
   /// The action when the button is pressed.
   final VoidCallback onPressed;
 
+  final double _height;
+  final double _width;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 35,
-      width: 35,
+      height: _height,
+      width: _width,
       decoration: BoxDecoration(
         color: backgroundColor,
         shape: BoxShape.circle,
