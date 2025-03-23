@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 /// Styles for the application.
 ///
@@ -35,5 +35,50 @@ abstract final class Styles {
     fontWeight: FontWeight.w500,
     fontSize: 16,
     height: 1.2,
+  );
+}
+
+/// Confirguation for the app theme.
+abstract class AppTheme {
+  /// The default theme.
+  static final theme = ThemeData(
+    colorScheme: _colorScheme,
+    primaryColor: Colors.black,
+    highlightColor: Colors.grey.shade200,
+    cardTheme: _cardTheme,
+    chipTheme: _chipTheme,
+    bottomSheetTheme: _bottomSheetTheme,
+  );
+
+  static final _colorScheme = ColorScheme.fromSeed(
+    seedColor: Colors.black,
+    primary: Colors.black,
+    secondary: Colors.grey.shade300,
+  );
+
+  static final _cardTheme = CardTheme(
+    color: Colors.grey.shade50,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(24),
+    ),
+  );
+
+  static final _chipTheme = ChipThemeData(
+    backgroundColor: Colors.transparent,
+    selectedColor: Colors.black87,
+    shadowColor: Colors.black45,
+    selectedShadowColor: Colors.black45,
+    surfaceTintColor: Colors.black45,
+    showCheckmark: false,
+    secondaryLabelStyle: TextStyle(
+      color: Colors.white,
+    ),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(100),
+    ),
+  );
+
+  static final _bottomSheetTheme = BottomSheetThemeData(
+    backgroundColor: Colors.transparent,
   );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'config/theme.dart';
 import 'data/repository.dart';
 import 'data/service_local.dart';
 import 'logic/home.dart';
@@ -20,9 +21,7 @@ class App extends StatelessWidget {
 
     return MaterialApp(
       title: 'Kite',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-      ),
+      theme: AppTheme.theme,
       home: HomeScreen(model: model),
     );
   }

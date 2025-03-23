@@ -68,9 +68,6 @@ class _SummaryView extends StatelessWidget {
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 2.0),
                     visualDensity: VisualDensity.compact,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100.0),
-                    ),
                     side: BorderSide(color: Colors.grey.shade300),
                   ),
                   CircleAvatar(
@@ -136,7 +133,6 @@ class _DetailView extends StatelessWidget {
   static Future<_DetailView?> show(BuildContext context, Article article) {
     return showModalBottomSheet<_DetailView>(
       isScrollControlled: true,
-      backgroundColor: Colors.transparent,
       context: context,
       builder: (context) {
         return _DetailView(article);
@@ -194,11 +190,9 @@ class _DetailView extends StatelessWidget {
                           article.group,
                           style: TextStyle(color: Colors.grey.shade600),
                         ),
+                        backgroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(horizontal: 2.0),
                         visualDensity: VisualDensity.compact,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(100.0),
-                        ),
                         side: BorderSide(color: Colors.grey.shade300),
                       ),
                       Spacing.s4,
@@ -235,10 +229,12 @@ class _HighlightsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card.filled(
-      color: Colors.grey.shade50,
       margin: EdgeInsets.zero,
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12.0,
+          vertical: 16.0,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
