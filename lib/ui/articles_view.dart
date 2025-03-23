@@ -24,6 +24,7 @@ class ArticlesView extends StatelessWidget {
             child: _SummaryView(
               title: item.title,
               group: item.group,
+              readTime: item.readTime().toString(),
             ),
           );
         },
@@ -33,10 +34,16 @@ class ArticlesView extends StatelessWidget {
 }
 
 class _SummaryView extends StatelessWidget {
-  const _SummaryView({super.key, required this.title, required this.group});
+  const _SummaryView({
+    super.key,
+    required this.title,
+    required this.group,
+    required this.readTime,
+  });
 
   final String title;
   final String group;
+  final String readTime;
 
   static const _timeToReadText = 'min read';
 
@@ -89,7 +96,7 @@ class _SummaryView extends StatelessWidget {
               ),
               SizedBox(height: 8),
               Row(
-                spacing: 8,
+                spacing: 4,
                 children: [
                   Icon(
                     LucideIcons.hourglass,
@@ -97,7 +104,7 @@ class _SummaryView extends StatelessWidget {
                     size: 18,
                   ),
                   Text(
-                    '? $_timeToReadText',
+                    '$readTime $_timeToReadText',
                     style: TextStyle(
                       color: Colors.grey.shade400,
                       letterSpacing: -0.5,
