@@ -130,6 +130,26 @@ void main() {
           match.should.beTrue();
         });
       });
+
+      when('the request fails', () {
+        final service = RemoteService(client);
+        late Result<List<CategoryModel>> result;
+
+        before(() async {
+          mock
+              .when(() => response.statusCode)
+              .thenReturn(HttpStatus.internalServerError);
+          mock.when(() => response.body).thenReturn('Internal Server Error');
+
+          result = await service.fetchCategories();
+          result.isError().should.beTrue();
+        });
+
+        then('it should return a failure', () {
+          final err = result.exceptionOrNull();
+          err.should.not.beNull();
+        });
+      });
     });
   });
 }
