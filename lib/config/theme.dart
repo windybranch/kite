@@ -67,6 +67,8 @@ abstract class AppTheme {
     colorScheme: _colorScheme,
     primaryColor: Colours.primary,
     highlightColor: Colors.grey.shade200,
+    dividerColor: Colors.transparent,
+    splashColor: Colors.transparent,
     cardTheme: _cardTheme,
     chipTheme: _chipTheme,
     bottomSheetTheme: _bottomSheetTheme,

@@ -42,6 +42,7 @@ dependencies:
   lucide_icons: ^0.257.0
   gap: ^3.0.1
   url_launcher: ^6.3.1
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -188,15 +189,9 @@ class _DetailView extends StatelessWidget {
                         side: BorderSide(color: Colors.grey.shade300),
                       ),
                       Spacing.s4,
-                      Text(
-                        article.title,
-                        style: Styles.title,
-                      ),
+                      Text(article.title, style: Styles.title),
                       Spacing.s24,
-                      Text(
-                        article.summary,
-                        style: Styles.body,
-                      ),
+                      Text(article.summary, style: Styles.body),
                       Spacing.s24,
                       _HighlightsCard(article.highlights),
                       Spacing.s24,
@@ -205,6 +200,8 @@ class _DetailView extends StatelessWidget {
                       _PerspectivesCard(article.perspectives),
                       Spacing.s24,
                       _TimelineCard(article.timeline),
+                      Spacing.s24,
+                      _SourcesCard(article.sources),
                       Spacing.s24,
                     ],
                   ),
@@ -536,6 +533,134 @@ class _TimelineCard extends StatelessWidget {
                 ),
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SourcesCard extends StatefulWidget {
+  const _SourcesCard(this.sources, {super.key});
+
+  final List<Source> sources;
+
+  static const _sourcesTitle = 'Sources';
+
+  @override
+  State<_SourcesCard> createState() => _SourcesCardState();
+}
+
+class _SourcesCardState extends State<_SourcesCard> {
+  bool _isExpanded = false;
+
+  Map<String, List<Source>> _groupSources() {
+    final grouped = <String, List<Source>>{};
+
+    for (final source in widget.sources) {
+      if (source.domain == null) continue;
+
+      grouped[source.domain!] ??= [];
+
+      if (grouped[source.domain]!.contains(source)) continue;
+
+      grouped[source.domain]!.add(source);
+    }
+
+    return grouped;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final grouped = _groupSources();
+
+    return Card.filled(
+      margin: EdgeInsets.zero,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 12.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    _SourcesCard._sourcesTitle,
+                    style: Styles.subtitle,
+                  ),
+                  CircleButton.tight(
+                    icon: _isExpanded ? LucideIcons.eyeOff : LucideIcons.eye,
+                    color: Colours.iconButton,
+                    backgroundColor: Colours.iconButtonBg,
+                    onPressed: () {
+                      setState(() {
+                        _isExpanded = !_isExpanded;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
+            if (_isExpanded) ...[
+              Spacing.s16,
+              ...grouped.keys.map(
+                (domain) => ExpansionTile(
+                  dense: true,
+                  tilePadding: EdgeInsets.only(right: 12.0),
+                  leading: Icon(LucideIcons.glasses),
+                  childrenPadding: EdgeInsets.fromLTRB(4.0, 8.0, 12.0, 12.0),
+                  title: Text(domain, style: Styles.minititle),
+                  children: [
+                    ...grouped[domain]!.map(
+                      (source) => Padding(
+                        padding: const EdgeInsets.only(bottom: 8.0),
+                        child: GestureDetector(
+                          onTap: () async {
+                            await launchUrl(Uri.parse(source.url));
+                          },
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            spacing: 8,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 2),
+                                child: Icon(
+                                  LucideIcons.arrowUpRightSquare,
+                                  color: Colours.icon,
+                                  size: 18,
+                                ),
+                              ),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      source.name,
+                                      style: Styles.metadata,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    if (source.date != null)
+                                      Text(
+                                        DateFormat('dd MMM yyyy')
+                                            .format(source.date!),
+                                        style: Styles.metadata,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ],
         ),
       ),
