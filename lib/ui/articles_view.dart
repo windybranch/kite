@@ -203,6 +203,9 @@ class _DetailView extends StatelessWidget {
                       _QuoteCard(article.quote),
                       Spacing.s24,
                       _PerspectivesCard(article.perspectives),
+                      Spacing.s24,
+                      _TimelineCard(article.timeline),
+                      Spacing.s24,
                     ],
                   ),
                 ]),
@@ -435,6 +438,101 @@ class _PerspectivesCard extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _TimelineCard extends StatelessWidget {
+  const _TimelineCard(this.timeline, {super.key});
+
+  final List<Event> timeline;
+
+  static const _timelineTitle = 'Timeline of events';
+
+  @override
+  Widget build(BuildContext context) {
+    return Card.filled(
+      margin: EdgeInsets.zero,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Text(
+                _timelineTitle,
+                style: Styles.subtitle,
+              ),
+            ),
+            Spacing.s16,
+            ...timeline.map(
+              (e) => Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12.0,
+                  vertical: 8.0,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IntrinsicHeight(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 8,
+                        children: [
+                          Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              CircleButton(
+                                icon: LucideIcons.calendar,
+                                color: Colors.grey.shade600,
+                                backgroundColor: Colors.grey.shade200,
+                                onPressed: () {},
+                              ),
+                              Spacing.s4,
+                              // Don't show the last line.
+                              if (e != timeline[timeline.length - 1])
+                                Flexible(
+                                  child: Container(
+                                    width: 4,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.shade200,
+                                      borderRadius: BorderRadius.circular(4.0),
+                                    ),
+                                  ),
+                                )
+                            ],
+                          ),
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: 8,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 4.0),
+                                  child: Text(
+                                    e.date,
+                                    style: Styles.minititle,
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(e.title, style: Styles.body),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
