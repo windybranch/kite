@@ -58,6 +58,7 @@ extension Colours on Colors {
   static final icon = Colors.grey.shade400;
   static final iconButton = Colors.grey.shade600;
   static final iconButtonBg = Colors.grey.shade200;
+  static const cardBold = Colors.black87;
 }
 
 /// Confirguation for the app theme.

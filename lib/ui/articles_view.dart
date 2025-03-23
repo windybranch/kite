@@ -203,6 +203,8 @@ class _DetailView extends StatelessWidget {
                       Spacing.s24,
                       _SourcesCard(article.sources),
                       Spacing.s24,
+                      _FactCard(article.fact),
+                      Spacing.s24,
                     ],
                   ),
                 ]),
@@ -661,6 +663,56 @@ class _SourcesCardState extends State<_SourcesCard> {
                 ),
               ),
             ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _FactCard extends StatelessWidget {
+  const _FactCard(this.fact, {super.key});
+
+  static const _factTitle = 'Did you know?';
+
+  final String fact;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card.filled(
+      margin: EdgeInsets.zero,
+      color: Colours.cardBold,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16.0,
+          vertical: 20.0,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleButton.tight(
+              icon: LucideIcons.sparkles,
+              color: Colors.white,
+              backgroundColor: Colours.cardBold.withValues(alpha: 0.4),
+              onPressed: () {},
+            ),
+            Spacing.s12,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 8.0,
+                children: [
+                  Text(
+                    _factTitle,
+                    style: Styles.subtitle.copyWith(color: Colors.white),
+                  ),
+                  Text(
+                    fact,
+                    style: Styles.body.copyWith(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
