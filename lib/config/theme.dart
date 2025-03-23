@@ -10,6 +10,7 @@ abstract final class Styles {
   static const body = _p1;
   static final chip = _b2;
   static final metadata = _p2;
+  static final button = _b1;
 
   static const _h1 = TextStyle(
     fontWeight: FontWeight.w700,
@@ -46,6 +47,13 @@ abstract final class Styles {
     fontSize: 16,
   );
 
+  static final _b1 = TextStyle(
+    color: Colors.white,
+    letterSpacing: -0.5,
+    fontWeight: FontWeight.w600,
+    fontSize: 18,
+  );
+
   static final _b2 = TextStyle(color: Colors.grey.shade600);
 }
 
@@ -58,6 +66,7 @@ extension Colours on Colors {
   static final icon = Colors.grey.shade400;
   static final iconButton = Colors.grey.shade600;
   static final iconButtonBg = Colors.grey.shade200;
+  static const cardBold = Colors.black87;
 }
 
 /// Confirguation for the app theme.
@@ -67,9 +76,12 @@ abstract class AppTheme {
     colorScheme: _colorScheme,
     primaryColor: Colours.primary,
     highlightColor: Colors.grey.shade200,
+    dividerColor: Colors.transparent,
+    splashColor: Colors.transparent,
     cardTheme: _cardTheme,
     chipTheme: _chipTheme,
     bottomSheetTheme: _bottomSheetTheme,
+    filledButtonTheme: _filledButtonTheme,
   );
 
   static final _colorScheme = ColorScheme.fromSeed(
@@ -102,5 +114,22 @@ abstract class AppTheme {
 
   static final _bottomSheetTheme = BottomSheetThemeData(
     backgroundColor: Colors.transparent,
+  );
+
+  static final _filledButtonTheme = FilledButtonThemeData(
+    style: ButtonStyle(
+      textStyle: WidgetStatePropertyAll(Styles.button),
+      padding: WidgetStatePropertyAll(
+        EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 12,
+        ),
+      ),
+      shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+      ),
+    ),
   );
 }
