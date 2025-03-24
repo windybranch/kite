@@ -185,6 +185,27 @@ void main() {
             match.should.beTrue();
           });
         });
+
+        when('the request fails', () {
+          final service = RemoteService(client);
+          late Result<List<ArticleModel>> result;
+
+          before(() async {
+            mock
+                .when(() => response.statusCode)
+                .thenReturn(HttpStatus.serverError);
+            mock.when(() => response.body).thenReturn('Internal Server Error');
+
+            final category = CategoryModel(name: 'World', file: 'world.json');
+            result = await service.fetchArticles(category);
+            result.isError().should.beTrue();
+          });
+
+          then('it should return a failure', () {
+            final err = result.exceptionOrNull();
+            err.should.not.beNull();
+          });
+        });
       });
     });
   });
