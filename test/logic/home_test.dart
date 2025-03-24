@@ -37,6 +37,8 @@ class FakeRepository implements Repository {
     String articleId, {
     required bool read,
   }) {
+    if (fail) return Future.value(Failure(Exception('Failed')));
+
     for (final category in cache) {
       if (category.name == categoryName) {
         final articles = category.articles;
@@ -149,7 +151,7 @@ void main() {
       ];
 
       final repo = FakeRepository(success: categories);
-      final model = HomeViewModel(repo: repo);
+      var model = HomeViewModel(repo: repo);
 
       before(() async {
         await model.load.execute();
@@ -177,6 +179,22 @@ void main() {
               }
             }
           }
+        });
+      });
+
+      when('the article update fails', () {
+        late Result<Unit> result;
+
+        before(() async {
+          repo.fail = true;
+          model = HomeViewModel(repo: repo);
+
+          result =
+              await model.markArticle(category.name, article.id, read: true);
+        });
+
+        then('a failure is returned', () {
+          result.isError().should.beTrue();
         });
       });
     });
