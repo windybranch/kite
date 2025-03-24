@@ -138,7 +138,7 @@ void main() {
         before(() async {
           mock
               .when(() => response.statusCode)
-              .thenReturn(HttpStatus.internalServerError);
+              .thenReturn(HttpStatus.serverError);
           mock.when(() => response.body).thenReturn('Internal Server Error');
 
           result = await service.fetchCategories();
