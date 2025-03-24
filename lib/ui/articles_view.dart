@@ -9,10 +9,13 @@ import '../logic/categories.dart';
 import 'core/circle_button.dart';
 import 'core/spacing.dart';
 
+typedef ReadStatusChanged = Function(String articleId, bool isRead);
+
 class ArticlesView extends StatelessWidget {
-  const ArticlesView(this.category, {super.key});
+  const ArticlesView(this.category, this.onChanged, {super.key});
 
   final Category category;
+  final ReadStatusChanged onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +26,12 @@ class ArticlesView extends StatelessWidget {
           final item = category.articles[index];
 
           return InkWell(
-            onTap: () => _DetailView.show(context, item),
+            onTap: () => _DetailView.show(context, item, onChanged),
             child: _SummaryView(
               title: item.title,
               group: item.group,
               readTime: item.readTime().toString(),
+              read: item.read,
             ),
           );
         },
@@ -41,11 +45,13 @@ class _SummaryView extends StatelessWidget {
     required this.title,
     required this.group,
     required this.readTime,
+    required this.read,
   });
 
   final String title;
   final String group;
   final String readTime;
+  final bool read;
 
   static const _timeToReadText = 'min read';
 
@@ -77,7 +83,8 @@ class _SummaryView extends StatelessWidget {
                   CircleButton.tight(
                     icon: LucideIcons.check,
                     color: Colors.white,
-                    backgroundColor: Colors.grey.shade200,
+                    backgroundColor:
+                        read ? Colors.black87 : Colors.grey.shade200,
                     onPressed: () {},
                   ),
                 ],
@@ -117,19 +124,24 @@ class _SummaryView extends StatelessWidget {
 }
 
 class _DetailView extends StatelessWidget {
-  const _DetailView(this.article);
+  const _DetailView(this.article, this.onChanged);
 
   final Article article;
+  final ReadStatusChanged onChanged;
 
   static const _buttonCloseText = 'Done reading';
 
   /// Displays the article in a bottom sheet.
-  static Future<_DetailView?> show(BuildContext context, Article article) {
+  static Future<_DetailView?> show(
+    BuildContext context,
+    Article article,
+    ReadStatusChanged onChanged,
+  ) {
     return showModalBottomSheet<_DetailView>(
       isScrollControlled: true,
       context: context,
       builder: (context) {
-        return _DetailView(article);
+        return _DetailView(article, onChanged);
       },
     );
   }
@@ -211,7 +223,10 @@ class _DetailView extends StatelessWidget {
                         children: [
                           FilledButton(
                             child: Text(_buttonCloseText),
-                            onPressed: () => Navigator.of(context).pop(),
+                            onPressed: () {
+                              onChanged(article.id, true);
+                              Navigator.of(context).pop();
+                            },
                           ),
                         ],
                       ),
