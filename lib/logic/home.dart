@@ -59,6 +59,12 @@ class HomeViewModel {
     final result =
         await _repo.updateReadStatus(categoryName, articleId, read: read);
 
+    if (result.isError()) {
+      final err = result.exceptionOrNull();
+      log('error marking article: $err');
+      return Failure(err!);
+    }
+
     final updated = result.getOrNull() ?? [];
     log('returned updated categories: articleId: $articleId, length: ${updated.length}');
 
