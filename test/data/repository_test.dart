@@ -51,7 +51,18 @@ void main() {
             // https://stackoverflow.com/questions/76697156/how-do-i-compare-dart-records-with-deep-equality
             final match = listEquals(world.articles, kArticles);
             // match.should.beTrue();
-          }
+          },
+          'the articles have ids': () {
+            final worlds =
+                categories.where((c) => c.name == kWorldCategory).toList();
+            worlds.length.should.be(1);
+            final world = worlds.first;
+            world.should.not.beNull();
+
+            for (final article in world.articles) {
+              article.id.should.not.beBlank();
+            }
+          },
         });
       });
 
