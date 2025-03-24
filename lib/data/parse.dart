@@ -5,17 +5,27 @@ import 'package:flutter/foundation.dart';
 import 'package:json_serializer/json_serializer.dart';
 
 import '../config/serialisation.dart';
+import 'article.dart';
 import 'categories.dart';
 
 /// Responsible for parsing JSON data into models.
 final class Parser {
   static const _categoriesKey = 'categories';
+  static const _articlesKey = 'clusters';
 
   /// Parses JSON data into a list of CategoryModel objects.
   Future<List<CategoryModel>> parseCategories(String json) {
     return compute(
       _decode<CategoryModel>,
       (content: json, key: _categoriesKey),
+    );
+  }
+
+  /// Parses JSON data into a list of ArticleModel objects.
+  Future<List<ArticleModel>> parseArticles(String json) {
+    return compute(
+      _decode<ArticleModel>,
+      (content: json, key: _articlesKey),
     );
   }
 

@@ -28,7 +28,21 @@ class RemoteService implements Service {
   final http.Client _client;
 
   @override
-  AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) {
+  AsyncResult<List<ArticleModel>> fetchArticles(CategoryModel category) async {
+    final response = await _client.get(Uri.parse(_Url.create(category.file)));
+
+    if (response.statusCode == HttpStatus.ok) {
+      final json = response.body;
+      final parser = Parser();
+      try {
+        final articles = await parser.parseArticles(json);
+        return Future.value(Success(articles));
+      } on Exception catch (e) {
+        log('error parsing categories $e');
+        return Future.value(Failure(e));
+      }
+    }
+
     // TODO: implement fetchArticles
     throw UnimplementedError();
   }
@@ -64,6 +78,9 @@ class RemoteService implements Service {
 
 abstract final class _Url {
   static const categories = 'https://kite.kagi.com/kite.json';
+  static const base = 'https://kite.kagi.com';
+
+  static String create(String file) => '$base/$file';
 }
 
 abstract final class _HttpErrors {
