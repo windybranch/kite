@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:result_dart/result_dart.dart';
+import 'package:uuid/uuid.dart';
 
 import '../logic/article.dart';
 import '../logic/categories.dart';
@@ -84,6 +85,7 @@ class CacheRepository implements Repository {
 
   Article _parseArticle(ArticleModel model) {
     return Article(
+      id: Uuid().v4(),
       group: model.category,
       title: model.title,
       summary: model.short_summary,
@@ -163,5 +165,54 @@ class CacheRepository implements Repository {
       return (split[0], split[1]);
     }
     return (input, '');
+  }
+
+  @override
+  AsyncResult<List<Category>> updateReadStatus(
+    String categoryName,
+    String articleId, {
+    required bool read,
+  }) {
+    for (final category in _cached) {
+      if (category.name == categoryName) {
+        final articles = category.articles;
+        Article article;
+
+        try {
+          article = articles.firstWhere((a) => a.id == articleId);
+        } on StateError catch (e) {
+          return Future.value(Failure(Exception('article not found: $e')));
+        }
+
+        final marked = article.copyMarked(read: true);
+        final updatedArticles = articles.map((a) {
+          if (a.id == articleId) return marked;
+          return a;
+        }).toList();
+
+        final updatedCategory = Category(
+          category.name,
+          updatedArticles,
+        );
+
+        final updatedCache = _cached.map((c) {
+          if (c.name == categoryName) return updatedCategory;
+          return c;
+        }).toList();
+
+        log('updated category cache length: ${updatedCache.length}');
+
+        if (updatedCache.isNotEmpty) {
+          _cached.clear();
+          _cached.addAll(updatedCache);
+        }
+
+        return Future.value(Success(_cached));
+      }
+    }
+
+    return Future.value(
+      Failure(Exception('article update failed: category not in cache')),
+    );
   }
 }

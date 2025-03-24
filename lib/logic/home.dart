@@ -49,4 +49,30 @@ class HomeViewModel {
   Future<void> retry() {
     return load.execute();
   }
+
+  /// Updates the article to mark it as read or unread.
+  AsyncResult<Unit> markArticle(
+    String categoryName,
+    String articleId, {
+    required bool read,
+  }) async {
+    final result =
+        await _repo.updateReadStatus(categoryName, articleId, read: read);
+
+    if (result.isError()) {
+      final err = result.exceptionOrNull();
+      log('error marking article: $err');
+      return Failure(err!);
+    }
+
+    final updated = result.getOrNull() ?? [];
+    log('returned updated categories: articleId: $articleId, length: ${updated.length}');
+
+    if (updated.isNotEmpty) {
+      _categories.clear();
+      _categories.addAll(updated);
+    }
+
+    return Future.value(Success(unit));
+  }
 }

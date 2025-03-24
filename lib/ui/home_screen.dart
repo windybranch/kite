@@ -46,10 +46,16 @@ class _HomeScreenState extends State<HomeScreen> {
             return _SuccessView(
               widget.model.categories,
               selected ?? widget.model.categories.first,
-              (category) {
+              onSelected: (category) {
                 setState(() {
                   selected = category;
                 });
+              },
+              onArticleRead: (article, read) {
+                final category =
+                    selected?.name ?? widget.model.categories.first.name;
+                widget.model.markArticle(category, article, read: read);
+                // TODO: force ui rebuild
               },
             );
           },
@@ -62,14 +68,15 @@ class _HomeScreenState extends State<HomeScreen> {
 class _SuccessView extends StatelessWidget {
   const _SuccessView(
     this._categories,
-    this.selected,
-    this.onSelected, {
-    super.key,
+    this.selected, {
+    required this.onSelected,
+    required this.onArticleRead,
   });
 
   final Category selected;
   final List<Category> _categories;
   final ValueChanged<Category> onSelected;
+  final ReadStatusChanged onArticleRead;
 
   @override
   Widget build(BuildContext context) {
@@ -84,14 +91,14 @@ class _SuccessView extends StatelessWidget {
             onSelected: onSelected,
           ),
         ),
-        ArticlesView(selected),
+        ArticlesView(selected, onArticleRead),
       ],
     );
   }
 }
 
 class _ErrorView extends StatelessWidget {
-  const _ErrorView(this.error, {required this.onRetry, super.key});
+  const _ErrorView(this.error, {required this.onRetry});
 
   final Exception error;
   final VoidCallback onRetry;
