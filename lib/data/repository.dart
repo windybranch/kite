@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:result_dart/result_dart.dart';
+import 'package:uuid/uuid.dart';
 
 import '../logic/article.dart';
 import '../logic/categories.dart';
@@ -84,6 +85,7 @@ class CacheRepository implements Repository {
 
   Article _parseArticle(ArticleModel model) {
     return Article(
+      id: Uuid().v4(),
       group: model.category,
       title: model.title,
       summary: model.short_summary,
