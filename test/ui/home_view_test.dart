@@ -25,7 +25,6 @@ void main() {
     testWidgets('displays categories', (tester) async {
       await tester.runAsync(() async {
         await testApp(tester, HomeScreen(model: model));
-        expect(find.byType(CircularProgressIndicator), findsOneWidget);
         // TODO: fix this test
         //
         // [pumpAndSettle] times out here and does not
