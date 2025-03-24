@@ -1,13 +1,31 @@
+import 'package:http/http.dart' as http;
 import 'package:kite/data/article.dart';
 import 'package:kite/data/categories.dart';
 import 'package:kite/data/service.dart';
 import 'package:kite/data/service_local.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:result_dart/result_dart.dart';
 
 import 'articles.dart';
 import 'categories.dart';
 
 const kWorldCategory = 'World';
+
+class MockHttpClient extends Mock implements http.Client {}
+
+class MockHttpResponse extends Mock implements http.Response {}
+
+/// Fake implementation of [Uri] for testing purposes.
+///
+/// Used with mocktail to allow argument matchers of [any].
+///
+/// Example usage:
+/// ```dart
+/// setUpAll(() {
+///   registerFallbackValue(FakeUri());
+/// });
+/// ```
+class FakeUri extends Fake implements Uri {}
 
 class FakeLoader implements AssetLoader {
   FakeLoader(this.successJson, {this.fail = false});
