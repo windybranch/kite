@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 import 'config/theme.dart';
 import 'data/repository.dart';
-import 'data/service_local.dart';
+import 'data/service_remote.dart';
 import 'logic/home.dart';
 import 'ui/home_screen.dart';
 
@@ -15,7 +16,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final service = LocalService(LocalAssetLoader());
+    final service = RemoteService(http.Client());
     final repo = CacheRepository(service);
     final model = HomeViewModel(repo: repo);
 

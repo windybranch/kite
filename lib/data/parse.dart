@@ -33,7 +33,17 @@ final class Parser {
     final models = <T>[];
 
     final decoded = jsonDecode(json.content) as Map<String, dynamic>;
-    final data = decoded[json.key] as List<dynamic>;
+
+    if (!decoded.containsKey(json.key)) return [];
+
+    final data = [];
+
+    try {
+      data.addAll(decoded[json.key] as List<dynamic>);
+    } on Exception catch (e) {
+      log('error decoding json asset: $e');
+      return [];
+    }
 
     for (final (item as Map<String, dynamic>) in data) {
       final encoded = jsonEncode(item);
