@@ -151,5 +151,41 @@ void main() {
         });
       });
     });
+
+    group('test fetching remote articles json', () {
+      setUpAll(() => mock.registerFallbackValue(FakeUri()));
+
+      given('a remote json url', () {
+        final client = MockHttpClient();
+        final response = MockHttpResponse();
+
+        before(() async {
+          mock.when(() => response.statusCode).thenReturn(HttpStatus.ok);
+          mock.when(() => response.body).thenReturn(kArticleJson);
+          mock
+              .when(() => client.get(mock.any()))
+              .thenAnswer((_) async => response);
+        });
+
+        when('fetching articles json for a category', () {
+          final service = RemoteService(client);
+          late Result<List<ArticleModel>> result;
+
+          before(() async {
+            final category = CategoryModel(name: 'World', file: 'world.json');
+            result = await service.fetchArticles(category);
+            result.isSuccess().should.beTrue();
+          });
+
+          then('it should return a list of article models', () {
+            final models = result.getOrNull();
+            models.should.not.beNull();
+            models?.length.should.be(kArticleModels.length);
+            final match = listEquals(models, kArticleModels);
+            match.should.beTrue();
+          });
+        });
+      });
+    });
   });
 }
