@@ -129,5 +129,63 @@ void main() {
         });
       });
     });
+
+    given('the cache has a list of categories', () {
+      final service = FakeService();
+      final repository = CacheRepository(service);
+      late Result<List<Category>> result;
+      String articleId = '';
+      List<Category> original = [];
+
+      before(() async {
+        result = await repository.loadCategories();
+        result.isSuccess().should.beTrue();
+        final categories = result.getOrNull() ?? [];
+        original = categories;
+        final article = categories
+            .firstWhere((c) => c.name == kWorldCategory)
+            .articles
+            .first;
+        article.read.should.beFalse();
+        articleId = article.id;
+        articleId.should.not.beBlank();
+      });
+
+      when('an article is marked as read', () {
+        late List<Category> updated;
+        late List<Category> cache;
+
+        before(() async {
+          result = await repository.updateReadStatus(
+            kWorldCategory,
+            articleId,
+            read: true,
+          );
+          result.isSuccess().should.beTrue();
+
+          updated = result.getOrNull() ?? [];
+          updated.should.not.beEmpty();
+
+          result = await repository.loadCategories();
+          result.isSuccess().should.beTrue();
+          cache = result.getOrNull() ?? [];
+          cache.should.not.beEmpty();
+        });
+
+        then('the cache should be updated', () {
+          final article =
+              cache.firstWhere((c) => c.name == kWorldCategory).articles.first;
+          article.id.should.be(articleId);
+          article.read.should.beTrue();
+          // TODO: this might fail even if matched,
+          // due to same deep equality issue above.
+          bool match = listEquals(cache, original);
+          match.should.not.beTrue();
+
+          match = listEquals(cache, updated);
+          match.should.beTrue();
+        });
+      });
+    });
   });
 }
