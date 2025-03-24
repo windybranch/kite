@@ -173,7 +173,46 @@ class CacheRepository implements Repository {
     String articleId, {
     required bool read,
   }) {
-    // TODO: implement updateArticle
-    throw UnimplementedError();
+    for (final category in _cached) {
+      if (category.name == categoryName) {
+        final articles = category.articles;
+        Article article;
+
+        try {
+          article = articles.firstWhere((a) => a.id == articleId);
+        } on StateError catch (e) {
+          return Future.value(Failure(Exception('article not found: $e')));
+        }
+
+        final marked = article.copyMarked(read: true);
+        final updatedArticles = articles.map((a) {
+          if (a.id == articleId) return marked;
+          return a;
+        }).toList();
+
+        final updatedCategory = Category(
+          category.name,
+          updatedArticles,
+        );
+
+        final updatedCache = _cached.map((c) {
+          if (c.name == categoryName) return updatedCategory;
+          return c;
+        }).toList();
+
+        log('updated category cache length: ${updatedCache.length}');
+
+        if (updatedCache.isNotEmpty) {
+          _cached.clear();
+          _cached.addAll(updatedCache);
+        }
+
+        return Future.value(Success(_cached));
+      }
+    }
+
+    return Future.value(
+      Failure(Exception('article update failed: category not in cache')),
+    );
   }
 }
