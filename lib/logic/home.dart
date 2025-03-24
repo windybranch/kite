@@ -56,6 +56,17 @@ class HomeViewModel {
     String articleId, {
     required bool read,
   }) async {
-    throw UnimplementedError();
+    final result =
+        await _repo.updateReadStatus(categoryName, articleId, read: read);
+
+    final updated = result.getOrNull() ?? [];
+    log('returned updated categories: articleId: $articleId, length: ${updated.length}');
+
+    if (updated.isNotEmpty) {
+      _categories.clear();
+      _categories.addAll(updated);
+    }
+
+    return Future.value(Success(unit));
   }
 }
