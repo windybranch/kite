@@ -43,8 +43,16 @@ class RemoteService implements Service {
       }
     }
 
-    // TODO: implement fetchArticles
-    throw UnimplementedError();
+    return switch (response.statusCode) {
+      HttpStatus.serverError => Future.value(
+          Failure(_HttpErrors.serverError(
+              response.statusCode, _Url.create(category.file))),
+        ),
+      _ => Future.value(
+          Failure(_HttpErrors.error(
+              response.statusCode, _Url.create(category.file))),
+        ),
+    };
   }
 
   @override
