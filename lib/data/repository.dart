@@ -164,4 +164,14 @@ class CacheRepository implements Repository {
     }
     return (input, '');
   }
+
+  @override
+  AsyncResult<List<Category>> updateReadStatus(
+    String categoryName,
+    String articleId, {
+    required bool read,
+  }) {
+    // TODO: implement updateArticle
+    throw UnimplementedError();
+  }
 }

@@ -49,4 +49,13 @@ class HomeViewModel {
   Future<void> retry() {
     return load.execute();
   }
+
+  /// Updates the article to mark it as read or unread.
+  AsyncResult<Unit> markArticle(
+    String categoryName,
+    String articleId, {
+    required bool read,
+  }) async {
+    throw UnimplementedError();
+  }
 }

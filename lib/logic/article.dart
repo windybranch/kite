@@ -3,6 +3,8 @@ import 'package:equatable/equatable.dart';
 /// Represents an article.
 final class Article with EquatableMixin {
   const Article({
+    this.id = '',
+    this.read = false,
     required this.group,
     required this.title,
     required this.summary,
@@ -15,6 +17,12 @@ final class Article with EquatableMixin {
     required this.sources,
     required this.fact,
   });
+
+  /// Unique identifier for the article.
+  final String id;
+
+  /// Whether the article has been read.
+  final bool read;
 
   /// The subcategory of the article.
   ///
@@ -94,8 +102,29 @@ final class Article with EquatableMixin {
     return (count / readingSpeed).ceil();
   }
 
+  /// Creates a copy of the article marked as [read].
+  Article copyMarked({required bool read}) {
+    return Article(
+      id: id,
+      read: read,
+      group: group,
+      title: title,
+      summary: summary,
+      highlights: highlights,
+      quote: quote,
+      perspectives: perspectives,
+      background: background,
+      reactions: reactions,
+      timeline: timeline,
+      sources: sources,
+      fact: fact,
+    );
+  }
+
   @override
   List<Object?> get props => [
+        id,
+        read,
         group,
         title,
         summary,
