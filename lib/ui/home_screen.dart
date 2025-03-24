@@ -60,12 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class _SuccessView extends StatelessWidget {
-  const _SuccessView(
-    this._categories,
-    this.selected,
-    this.onSelected, {
-    super.key,
-  });
+  const _SuccessView(this._categories, this.selected, this.onSelected);
 
   final Category selected;
   final List<Category> _categories;
@@ -91,7 +86,7 @@ class _SuccessView extends StatelessWidget {
 }
 
 class _ErrorView extends StatelessWidget {
-  const _ErrorView(this.error, {required this.onRetry, super.key});
+  const _ErrorView(this.error, {required this.onRetry});
 
   final Exception error;
   final VoidCallback onRetry;

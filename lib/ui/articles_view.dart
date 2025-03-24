@@ -38,7 +38,6 @@ class ArticlesView extends StatelessWidget {
 
 class _SummaryView extends StatelessWidget {
   const _SummaryView({
-    super.key,
     required this.title,
     required this.group,
     required this.readTime,
@@ -118,7 +117,7 @@ class _SummaryView extends StatelessWidget {
 }
 
 class _DetailView extends StatelessWidget {
-  const _DetailView(this.article, {super.key});
+  const _DetailView(this.article);
 
   final Article article;
 
@@ -230,7 +229,7 @@ class _DetailView extends StatelessWidget {
 }
 
 class _HighlightsCard extends StatelessWidget {
-  const _HighlightsCard(this.highlights, {super.key});
+  const _HighlightsCard(this.highlights);
 
   final List<Highlight> highlights;
 
@@ -294,7 +293,7 @@ class _HighlightsCard extends StatelessWidget {
 }
 
 class _QuoteCard extends StatelessWidget {
-  const _QuoteCard(this.quote, {super.key});
+  const _QuoteCard(this.quote);
 
   final Quote quote;
 
@@ -344,7 +343,7 @@ class _QuoteCard extends StatelessWidget {
 }
 
 class _PerspectivesCard extends StatelessWidget {
-  const _PerspectivesCard(this.perspectives, {super.key});
+  const _PerspectivesCard(this.perspectives);
 
   final List<Perspective> perspectives;
 
@@ -460,7 +459,7 @@ class _PerspectivesCard extends StatelessWidget {
 }
 
 class _TimelineCard extends StatelessWidget {
-  const _TimelineCard(this.timeline, {super.key});
+  const _TimelineCard(this.timeline);
 
   final List<Event> timeline;
 
@@ -555,7 +554,7 @@ class _TimelineCard extends StatelessWidget {
 }
 
 class _SourcesCard extends StatefulWidget {
-  const _SourcesCard(this.sources, {super.key});
+  const _SourcesCard(this.sources);
 
   final List<Source> sources;
 
@@ -683,7 +682,7 @@ class _SourcesCardState extends State<_SourcesCard> {
 }
 
 class _FactCard extends StatelessWidget {
-  const _FactCard(this.fact, {super.key});
+  const _FactCard(this.fact);
 
   static const _factTitle = 'Did you know?';
 
