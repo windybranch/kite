@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:result_command/result_command.dart';
@@ -57,6 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 widget.model.markArticle(category, article, read: read);
                 // TODO: force ui rebuild
               },
+              onRefresh: () async {
+                await widget.model.refresh();
+              },
             );
           },
         ),
@@ -71,12 +75,14 @@ class _SuccessView extends StatelessWidget {
     this.selected, {
     required this.onSelected,
     required this.onArticleRead,
+    required this.onRefresh,
   });
 
   final Category selected;
   final List<Category> _categories;
   final ValueChanged<Category> onSelected;
   final ReadStatusChanged onArticleRead;
+  final Future<void> Function() onRefresh;
 
   @override
   Widget build(BuildContext context) {
@@ -90,6 +96,10 @@ class _SuccessView extends StatelessWidget {
             selected,
             onSelected: onSelected,
           ),
+        ),
+        // TODO: customise refresh indicator via builder
+        CupertinoSliverRefreshControl(
+          onRefresh: onRefresh,
         ),
         ArticlesView(selected, onArticleRead),
       ],

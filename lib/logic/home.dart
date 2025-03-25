@@ -50,6 +50,13 @@ class HomeViewModel {
     return load.execute();
   }
 
+  /// Force refresh loading the categories.
+  ///
+  /// Currently a wrapper around the load command.
+  Future<void> refresh() {
+    return load.execute();
+  }
+
   /// Updates the article to mark it as read or unread.
   AsyncResult<Unit> markArticle(
     String categoryName,
