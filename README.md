@@ -1,6 +1,10 @@
 # Kite
 
-A simple news aggregator application using Flutter.
+A simple news aggregator application using Flutter inspired by
+[Kite](https://kite.kagi.com/).
+
+Based on the Flutter
+[MVVM architecture](https://docs.flutter.dev/app-architecture).
 
 ## Getting Started
 
@@ -49,3 +53,19 @@ pre-commit install
 ```
 
 This will use the `.pre-commit-config.yaml` to use the listed plugins.
+
+## Running the App
+
+Ensure that running:
+
+```sh
+flutter doctor
+```
+
+Shows iOS and Android development is setup correctly.
+
+Open either the iOS or Android Simulator and run:
+
+```sh
+flutter run
+```
