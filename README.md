@@ -6,6 +6,8 @@ A simple news aggregator application using Flutter inspired by
 Based on the Flutter
 [MVVM architecture](https://docs.flutter.dev/app-architecture).
 
+![App Screenshots](screenshots/screenshots.png?raw=true)
+
 ## Getting Started
 
 This project uses [Flutter Version Management (FVM)](https://fvm.app/) to manage
