@@ -149,7 +149,7 @@ class _DetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.95,
+      height: MediaQuery.of(context).size.height - kToolbarHeight,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -218,17 +218,21 @@ class _DetailView extends StatelessWidget {
                       Spacing.s24,
                       _FactCard(article.fact),
                       Spacing.s24,
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          FilledButton(
-                            child: Text(_buttonCloseText),
-                            onPressed: () {
-                              onChanged(article.id, true);
-                              Navigator.of(context).pop();
-                            },
-                          ),
-                        ],
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).viewPadding.bottom),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            FilledButton(
+                              child: Text(_buttonCloseText),
+                              onPressed: () {
+                                onChanged(article.id, true);
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                       Spacing.s8,
                     ],
